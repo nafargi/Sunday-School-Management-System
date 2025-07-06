@@ -17,13 +17,13 @@ const Sidebar = () => {
   return (
     <div className="fixed inset-y-0 left-0 w-64 bg-white shadow-lg">
       {/* Logo Section */}
-      <div className="flex items-center pl-6 h-16 border-b border-gray-200">
+      <div className="flex items-center pl-6 h-18.5 border-b border-gray-200">
        < AcademicCapIcon className="w-8 h-8 mr-2 p-1 bg-[#7C3BED] text-white rounded-full " /><h1 className="text-xl font-bold text-[#7C3BED]">SundayHub</h1>
       </div>
 
       {/* Navigation */}
       <nav className="p-4">
-        <div className="space-y-1">
+        <div className="space-y-3">
           {/* Active Nav Item */}
           <a
             href="#"
