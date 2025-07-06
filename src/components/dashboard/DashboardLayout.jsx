@@ -8,7 +8,7 @@ import ActivitiesTab from '../components/dashboard/ActivitiesTab';
 const Dashboard = () => {
   const [activeTab, setActiveTab] = useState('Overview');
 
-  const renderTab = () => {
+  const renderTabContent = () => {
     switch (activeTab) {
       case 'Age Groups':
         return <AgeGroupsTab />;
@@ -23,7 +23,7 @@ const Dashboard = () => {
     <div className="p-6">
       <DashboardHeader />
       <TabSwitcher activeTab={activeTab} setActiveTab={setActiveTab} />
-      {renderTab()}
+      <div className="mt-6">{renderTabContent()}</div>
     </div>
   );
 };
