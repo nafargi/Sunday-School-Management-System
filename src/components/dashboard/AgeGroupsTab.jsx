@@ -51,7 +51,7 @@ const AgeGroupsTab = () => {
       </div>
 
       {/* Bar Chart */}
-      <div className="mt-6 bg-white p-6 rounded-xl ">
+      <div className="mt-8 bg-white p-6 rounded-xl shadow-xl shadow-[#00000009]">
         <h2 className="text-lg   ">Age Group Distribution</h2>
         <p className='mb-4 text-sm text-gray-500'>Children by age group</p>
         <AgeGroupChart />

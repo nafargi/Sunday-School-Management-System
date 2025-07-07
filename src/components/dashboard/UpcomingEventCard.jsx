@@ -7,7 +7,7 @@ const UpcomingEventCard = ({ title, date, description, tag, }) => {
       </div>
       <div>
         <h3 className=" text-gray-800">{title}</h3>
-        <p className="text-gray-400 text-sm ">{date}</p>
+        <p className="text-gray-500 text-sm ">{date}</p>
 
         {tag && <span className="inline-block mt-1 text-xs px-2 py-0.5 bg-purple-100 text-purple-700 rounded">{tag}</span>}
         <p className="text-sm  mt-1">{description}</p>
