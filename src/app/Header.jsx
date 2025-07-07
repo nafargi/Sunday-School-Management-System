@@ -4,7 +4,7 @@ function Header() {
   return (
     <div>
        {/* searcch bar */}
-        <div className="flex items-center justify-between p-4 bg-white shadow-lg ">
+        <div className="flex items-center justify-between p-4 bg-[#ffffffdf] backdrop-blur-xs shadow-2xl shadow-[#00000015] z-40  fixed top-0 w-full ">
             <div className="flex items-center space-x-4">
             <input
                 type="text"

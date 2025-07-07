@@ -8,7 +8,7 @@ const DashboardHeader = () => {
 
   return (
     <div>
-      <h1 className="text-2xl font-bold text-gray-800">Welcome to Sunday School Hub</h1>
+      <h1 className="text-2xl  text-gray-800">Welcome to Sunday School Hub</h1>
       <p className="text-sm text-gray-500">Today is {today}</p>
     </div>
   );

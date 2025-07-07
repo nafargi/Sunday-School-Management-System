@@ -10,11 +10,10 @@ module.exports = {
         primary: '#1e40af',
         secondary: '#9333ea',
       },
-      fontFamily: {
-        poppins: ['Poppins', 'sans-serif'],
+     fontFamily: {
+        fredoka: ['Fredoka', 'sans-serif'],
       },
     },
   },
   plugins: [],
 }
-jgbc

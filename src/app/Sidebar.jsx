@@ -32,7 +32,7 @@ const SidebarLink = ({ to, label, Icon }) => (
 
 const Sidebar = () => {
   return (
-    <div className="fixed inset-y-0 left-0 w-64 bg-white shadow-lg">
+    <div className="fixed inset-y-0 left-0 w-64 bg-white shadow-2xl shadow-[#0000000e] z-50">
       {/* Logo Section */}
       <div className="flex items-center pl-6 h-18.5 border-b border-gray-200">
         <AcademicCapIcon className="w-8 h-8 mr-2 p-1 bg-[#7C3BED] text-white rounded-full" />
