@@ -32,9 +32,8 @@ const OverviewTab = () => {
 
           <div className="border rounded-lg border-gray-200 p-2 flex items-center justify-center mt-4">
             <div className="flex ">
-            <h3 className=" text-gray-800">View all Event </h3>
-            <ChevronRightIcon className='w-4 font-semibold' />
-
+              <h3 className=" text-gray-800">View all Event </h3>
+              <ChevronRightIcon className='w-4 font-semibold' />
            </div>
           </div>
         </div>
