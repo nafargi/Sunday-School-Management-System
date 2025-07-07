@@ -7,6 +7,7 @@ import {
   Tooltip,
   ResponsiveContainer,
   CartesianGrid,
+  Legend,
 } from 'recharts';
 
 const data = [
@@ -58,8 +59,11 @@ const AttendanceAreaGraph = () => {
             stroke="#10B981"
             fill="url(#presentColor)"
           />
+          <Legend verticalAlign="bottom" />
+
         </AreaChart>
       </ResponsiveContainer>
+      
     </div>
   );
 };

@@ -18,7 +18,7 @@ const SidebarLink = ({ to, label, Icon }) => (
   <NavLink
     to={to}
     className={({ isActive }) =>
-      `flex items-center px-4 py-3 text-sm font-medium rounded-lg group ${
+      `flex items-center px-4 py-3 text-sm  rounded-lg group ${
         isActive
           ? 'text-white bg-[#7C3BED]'
           : 'text-gray-600 hover:bg-[#7c3bed21] hover:text-[#7C3BED]'
@@ -36,7 +36,7 @@ const Sidebar = () => {
       {/* Logo Section */}
       <div className="flex items-center pl-6 h-18.5 border-b border-gray-200">
         <AcademicCapIcon className="w-8 h-8 mr-2 p-1 bg-[#7C3BED] text-white rounded-full" />
-        <h1 className="text-xl font-bold text-[#7C3BED]">SundayHub</h1>
+        <h1 className="text-2xl font-[500] text-[#7C3BED]">SundayHub</h1>
       </div>
 
       {/* Navigation */}

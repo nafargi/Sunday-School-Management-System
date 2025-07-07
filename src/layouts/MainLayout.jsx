@@ -11,9 +11,9 @@ function MainLayout() {
       <div className="ml-64">
 
         <Header />
-        <div className="p-1 mt-18">
-            <div className="fixed w-[100%]  z-[-1]">
-                <svg width="100%" height="10%" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <div className="p-1 mt-12">
+            <div className="fixed w-[100%] left-0 top-[-100px]  z-[-1]">
+                <svg width="100%" height="100%" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
                 <defs>
                     <pattern id="churchPattern" patternUnits="userSpaceOnUse" width="100" height="100">
                     <rect width="100" height="100" fill="#f8f7ff"/>
@@ -23,6 +23,8 @@ function MainLayout() {
                     <circle cx="20" cy="20" r="5" fill="#e9d5ff" fill-opacity="0.2"/>
                     <circle cx="80" cy="20" r="3" fill="#e9d5ff" fill-opacity="0.2"/>
                     <circle cx="20" cy="80" r="3" fill="#e9d5ff" fill-opacity="0.2"/>
+                    <circle cx="80" cy="80" r="5" fill="#e9d5ff" fill-opacity="0.2"/>
+
                     </pattern>
                 </defs>
              <rect width="100" height="100" fill="url(#churchPattern)"/>

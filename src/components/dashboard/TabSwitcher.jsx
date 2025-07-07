@@ -2,14 +2,14 @@ const TabSwitcher = ({ activeTab, setActiveTab }) => {
   const tabs = ['Overview', 'Age Groups', 'Activities'];
 
   return (
-    <div className="mt-4 flex space-x-4 border-b border-gray-200">
+    <div className="mt-4 flex space-x-4 bg-white inline-block rounded-lg ">
       {tabs.map((tab) => (
         <button
           key={tab}
           onClick={() => setActiveTab(tab)}
-          className={`px-4 py-2 text-sm font-medium ${
+          className={`px-4 py-1 text-sm ${
             activeTab === tab
-              ? 'text-[#7C3BED] border-b-2 border-[#7C3BED]'
+              ? 'bg-[#7C3BED] text-white border-b-2 shadow-sm shadow-[#0000002c]  border-[#7C3BED] rounded-sm'
               : 'text-gray-500'
           }`}
         >
