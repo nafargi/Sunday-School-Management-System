@@ -8,7 +8,7 @@ const Children = () => {
   const [activeTab, setActiveTab] = useState('List View');
 
   const renderTab = () => {
-    switch (activeTab) {
+  switch (activeTab) {
       case 'Grid View':
         return <GridViewTab />;
       default:

@@ -1,8 +1,12 @@
 import React from 'react'
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
+
 import ListInfo from './ListIInfo'
 
 function ListViewTab() {
+const navigate = useNavigate();
+
 const childrenData = [
   {
     id: 1,
@@ -319,34 +323,39 @@ const childrenData = [
     return matchesSearch && matchesAgeGroup && matchesAttendance;
   });
 
+  const handleChildClick = (childId) => {
+  const child = childrenData.find(c => c.id === childId);
+  navigate(`/children/${childId}`, { state: { childData: child } });
+};
+
   // Get unique age groups for filter dropdown
   const ageGroups = ['All', ...new Set(childrenData.map(child => child.ageGroup))];
   const attendanceOptions = ['All', 'Present', 'Absent'];
   return (
-      <div className=" bg-white p-6 rounded-2xl shadow-xl shadow-[#00000009] mt-6">
-
-        <h2 className=" text-2xl ">  Children Directory </h2>
-        <p className='text-sm text-gray-500 mb-6 '>Showing all children in Sunday School</p>
+<div className="bg-white p-6 rounded-2xl shadow-xl shadow-[#00000009] mt-6">
+      <h2 className="text-2xl">Children Directory</h2>
+      <p className='text-sm text-gray-500 mb-6'>Showing all children in Sunday School</p>
+      
       {/* Search and Filter Bar */}
-      <div className="grid  grid-cols-12 gap-4 mb-2 bg-white rounded-lg ">
-        {/* Search Input */}
-        <div className='col-span-6'>
-          <label htmlFor="search" className="block   text-gray-700 mb-1">
+      <div className="grid grid-cols-1 md:grid-cols-12 gap-4 mb-2">
+        {/* Search Input - Full width on mobile, 6 cols on desktop */}
+        <div className='md:col-span-6'>
+          <label htmlFor="search" className="block text-gray-700 mb-1">
             Search Children
           </label>
           <input
             type="text"
             id="search"
             placeholder="Search by name..."
-            className="w-full p-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500 "
+            className="w-full p-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
           />
         </div>
 
-        {/* Age Group Filter */}
-        <div className='col-span-3'>
-          <label htmlFor="ageGroup" className="block  text-gray-700 mb-1">
+        {/* Age Group Filter - Full width on mobile, 3 cols on desktop */}
+        <div className='md:col-span-3'>
+          <label htmlFor="ageGroup" className="block text-gray-700 mb-1">
             Age Group
           </label>
           <select
@@ -356,14 +365,14 @@ const childrenData = [
             onChange={(e) => setSelectedAgeGroup(e.target.value)}
           >
             {ageGroups.map(group => (
-              <option className='bg-purple-50 outline outline-amber-100 border border-gray-200' key={group} value={group}>{group}</option>
+              <option key={group} value={group}>{group}</option>
             ))}
           </select>
         </div>
 
-        {/* Attendance Filter */}
-        <div className='col-span-3'>
-          <label htmlFor="attendance" className="block  text-gray-700 mb-1">
+        {/* Attendance Filter - Full width on mobile, 3 cols on desktop */}
+        <div className='md:col-span-3'>
+          <label htmlFor="attendance" className="block text-gray-700 mb-1">
             Attendance
           </label>
           <select
@@ -380,28 +389,30 @@ const childrenData = [
       </div>
 
       {/* Results Count */}
-      <div className="px-4 py-2 mb-2 bg-purple-50 p-text rounded-lg">
+      <div className="px-4 py-2 mb-2 bg-purple-50 rounded-lg">
         Showing {filteredChildren.length} of {childrenData.length} children
       </div>
 
-      {/* Table Header */}
-      <div className="grid grid-cols-12 gap-2 p-3 mb-0  rounded-t-lg border text-gray-500 border-gray-200  text-sm">
+      {/* Table Header - Hidden on mobile */}
+      <div className="grid grid-cols-12 gap-2 p-3 mb-0 rounded-t-lg border text-gray-500 border-gray-200 text-sm">
         <div className="col-span-1">#</div>
-        <div className="col-span-1">Photo</div>
-        <div className="col-span-2">Name</div>
-        <div className="col-span-1">Age</div>
-        <div className="col-span-2">Group</div>
-        <div className="col-span-2">Status</div>
-        <div className="col-span-2">Emergency</div>
-        <div className="col-span-1">Actions</div>
+        <div className="md:col-span-1 col-span-4">Photo</div>
+        <div className="md:col-span-2 col-span-4">Name</div>
+        <div className="md:col-span-1 hidden lg:block ">Age</div>
+        <div className="md:col-span-2 hidden md:block ">Group</div>
+        <div className="md:col-span-2 hidden lg:block ">Status</div>
+        <div className="md:col-span-2 hidden lg:block ">Emergency</div>
+        <div className="md:col-span-1 col-span-3 ">Actions</div>
       </div>
       
       {/* Children List */}
-      <div className=" ">
+      <div className="divide-y divide-gray-200">
         {filteredChildren.length > 0 ? (
           filteredChildren.map((child) => (
-            < ListInfo
+            <ListInfo
               key={child.id}
+              onClick={() => handleChildClick(child.id)}
+
               {...child}
             />
           ))

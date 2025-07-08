@@ -11,7 +11,9 @@ import Notifications from './pages/Notifications';
 import Permissions from './pages/Permissions';
 import Settings from './pages/Settings';
 import Reports from './pages/Reports';
+import UserProfile from './pages/UserProfile'
 import Activities from './pages/Activities';
+import ChildDetailView from '././components/children/ChildDetailView';
 
 
 
@@ -24,6 +26,7 @@ function App() {
           <Route path="dashboard" element={<Dashboard />} />
           <Route path="lessons" element={<Lessons />} />
           <Route path="children" element={<Children />} />
+          <Route path="children/:id" element={<UserProfile/>} />
           <Route path="attendance" element={<Attendance />} />
           <Route path="notifications" element={<Notifications />} />
           <Route path="reports" element={<Reports />} />
@@ -31,9 +34,6 @@ function App() {
           <Route path="settings" element={<Settings/>} />
           <Route path="activities" element={<Activities/>} />
           <Route path="permissions" element={<Permissions/>} />
-
-
-
           {/* Add more routes as needed */}
         </Route>
       </Routes>

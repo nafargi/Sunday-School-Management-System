@@ -1,0 +1,23 @@
+const TabSwitcher = ({ activeTab, setActiveTab }) => {
+  const tabs = ['Basic Info','Sunday School', 'Permissions','Interests'];
+
+  return (
+    <div className="mt-4 px-6  space-x-4 bg-white inline-block rounded-lg ">
+      {tabs.map((tab) => (
+        <button
+          key={tab}
+          onClick={() => setActiveTab(tab)}
+          className={`px-4 py-1 text-sm ${
+            activeTab === tab
+              ? 'bg-[#7C3BED] text-white border-b-2 shadow-sm shadow-[#0000002c]  border-[#7C3BED] rounded-sm'
+              : 'text-gray-500'
+          }`}
+        >
+          {tab}
+        </button>
+      ))}
+    </div>
+  );
+};
+
+export default TabSwitcher;

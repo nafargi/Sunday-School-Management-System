@@ -77,18 +77,19 @@ const imageMap = {
   'age5/30': child30
 };
 
-const ListIInfo = ({ id, photo, folder, name, age, ageGroup, attendance, emergencyContact }) => {
+const ListIInfo = ({ id, photo, folder, name, age, ageGroup, attendance, emergencyContact, onClick }) => {
   const imageKey = `${folder}/${photo}`;
   const imageSrc = imageMap[imageKey] || null;
 
   return (
     <div className='flex items-center   hover:bg-gray-50 '>
 
-      <div className="grid grid-cols-12 gap-2 p-3  w-full justify-center border-l border-r border-b border-gray-200 ">
+      <div className="grid grid-cols-12 gap-2 p-3  w-full justify-center border-l border-r border-b border-gray-200 "
+      onClick={onClick}>
         <div className="col-span-1 flex items-center">
             <p className="w-8  text-gray-500">{id}</p>
         </div>
-        <div className="flex-shrink-0 col-span-1 ">
+        <div className=" md:col-span1 col-span-4 lg:col-span-1 ">
         {imageSrc ? (
             <img 
                 src={imageSrc} 
@@ -101,29 +102,29 @@ const ListIInfo = ({ id, photo, folder, name, age, ageGroup, attendance, emergen
             </div>
             )}
          </div>
-        <div className="col-span-2 flex items-center">
+        <div className="md:col-span-2 lg:col-span-2  col-span-4 flex items-center">
           <h2 className='text-sm  text-gray-800'>{name}</h2>
         </div>
 
-        <div className="col-span-1  flex items-center">
+        <div className="md:col-span-1 hidden lg:block  flex items-center">
           <p className=' text-gray-500'> {age}</p>
         </div>
         
-        <div className="col-span-2 flex items-center">
+        <div className="md:col-span-2 flex items-center hidden md:block ">
           <p className='  text-gray-700'>{ageGroup}</p>
         </div>
         
-        <div className="col-span-2 flex items-center">
+        <div className="md:col-span-2 flex items-center hidden lg:block ">
           <p className={`  ${attendance === 'Present' ? 'text-green-600' : 'text-red-600'}`}>
             {attendance}
           </p>
         </div>
         
-        <div className="col-span-2 flex items-center">
+        <div className="md:col-span-2 flex items-center hidden lg:block ">
           <p className=' text-gray-700 truncate'>{emergencyContact}</p>
         </div>
 
-        <div className="col-span-1  flex items-center">
+        <div className="md:col-span-1 col-span-3 flex items-center">
           <p className=' text-gray-700 '>...</p>
         </div>
       </div>
