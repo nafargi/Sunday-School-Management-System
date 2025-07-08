@@ -1,9 +1,15 @@
 import React from 'react'
-
+import Interests from './permissions/Interests'
+import Personality from './permissions/Personality'
+import Notes from './permissions/Notes'
 function permissions() {
   return (
     <div>
-       permisson
+        
+        <Interests />
+        <Personality />
+    
+        <Notes />
     </div>
   )
 }
