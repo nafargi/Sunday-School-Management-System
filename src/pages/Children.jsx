@@ -9,7 +9,7 @@ const Children = () => {
 
   const renderTab = () => {
     switch (activeTab) {
-      case 'Gird View':
+      case 'Grid View':
         return <GridViewTab />;
       default:
         return <ListViewTab />;
