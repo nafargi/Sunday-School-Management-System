@@ -23,7 +23,7 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<MainLayout />}>
-          <Route path="dashboard" element={<Dashboard />} />
+          <Route path="/dashboard" element={<Dashboard />} />
           <Route path="lessons" element={<Lessons />} />
           <Route path="children" element={<Children />} />
           <Route path="children/:id" element={<UserProfile/>} />
