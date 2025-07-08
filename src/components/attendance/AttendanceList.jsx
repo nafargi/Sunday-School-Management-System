@@ -2,6 +2,8 @@ import React from 'react'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 
+import AttendanceSummary from './AttendanceSummary'
+import AttendanceDate from './AttendanceDate'
 import ListInfo from './ListInfo'
 
 function ListAttendance() {
@@ -309,107 +311,132 @@ const childrenData = [
     emergencyContact: "0299001122 (Father)"
   }
 ];
+   const [children, setChildren] = useState(childrenData);
+
 // State for filters
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedAgeGroup, setSelectedAgeGroup] = useState('All');
   const [selectedAttendance, setSelectedAttendance] = useState('All');
 
   // Filter children data based on search and filters
-  const filteredChildren = childrenData.filter(child => {
+    const filteredChildren = children.filter(child =>{
     const matchesSearch = child.name.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesAgeGroup = selectedAgeGroup === 'All' || child.ageGroup === selectedAgeGroup;
     const matchesAttendance = selectedAttendance === 'All' || child.attendance === selectedAttendance;
-    
     return matchesSearch && matchesAgeGroup && matchesAttendance;
   });
 
-  const handleChildClick = (childId) => {
-  const child = childrenData.find(c => c.id === childId);
-  navigate(`/children/${childId}`, { state: { childData: child } });
-};
-
   // Get unique age groups for filter dropdown
-  const ageGroups = ['All', ...new Set(childrenData.map(child => child.ageGroup))];
   const attendanceOptions = ['All', 'Present', 'Absent'];
+  
+
+  const toggleAttendance = (id) => {
+    const updated = children.map(child =>
+      child.id === id
+        ? { ...child, attendance: child.attendance === "Present" ? "Absent" : "Present" }
+        : child
+    );
+    setChildren(updated);
+  };
+
+  const presentCount = children.filter(c => c.attendance === "Present").length;
+  const absentCount = children.length - presentCount;
+  const rate = Math.round((presentCount / children.length) * 100);
+
   return (
-<div className="bg-white p-6 rounded-2xl shadow-xl shadow-[#00000009] mt-6">
-
-       <div className="flex  items-center justify-between">
-        <div className="">
-                 <h2 className="text-2xl">Mark Attendance</h2>
-                 <p className='text-sm text-gray-500 mb-6'>Click on a child to toggle their attendance status</p>
-        </div>
-          <button className="border border-gray-200 bg-white text-gray-800 px-4 py-2 rounded-lg hover:bg-gray-50 transition-colors flex items-center">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-download mr-2 h-4 w-4"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" x2="12" y1="15" y2="3"></line></svg>
-            Export Report
-          </button>
-       </div>
-     
-      
-      {/* Search and Filter Bar */}
-      <div className="grid  grid-cols-1 md:grid-cols-12 gap-4 mb-2">
-        {/* Search Input - Full width on mobile, 6 cols on desktop */}
-        <div className='md:col-span-10'>
-          <label htmlFor="search" className="block text-gray-700 mb-1">
-            Search Children
-          </label>
-          <input
-            type="text"
-            id="search"
-            placeholder="Search by name..."
-            className="w-full p-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-          />
-        </div>
-
-      
-
-        {/* Attendance Filter - Full width on mobile, 3 cols on desktop */}
-        <div className='md:col-span-2'>
-          <label htmlFor="attendance" className="block text-gray-700 mb-1">
-            Attendance
-          </label>
-          <select
-            id="attendance"
-            className="w-full p-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
-            value={selectedAttendance}
-            onChange={(e) => setSelectedAttendance(e.target.value)}
-          >
-            {attendanceOptions.map(option => (
-              <option key={option} value={option}>{option}</option>
-            ))}
-          </select>
-        </div>
-      </div>
-
-      {/* Table Header - Hidden on mobile */}
-      <div className="grid grid-cols-12 gap-2 p-3 mb-0 rounded-t-lg border text-gray-500 border-gray-200 text-sm">
-        <div className="col-span-0">#</div>
-        <div className="col-span-2 ">Photo</div>
-        <div className="col-span-4 ">Name</div>
-        <div className="col-span-3  ">Age Group</div>
-        <div className="col-span-2 ">Status</div>
-      </div>
-      
-      {/* Children List */}
-      <div className="divide-y divide-gray-200">
-        {filteredChildren.length > 0 ? (
-          filteredChildren.map((child) => (
-            <ListInfo
-              key={child.id}
-              onClick={() => handleChildClick(child.id)}
-
-              {...child}
-            />
-          ))
-        ) : (
-          <div className="p-4 text-center text-gray-500">
-            No children match your search criteria
-          </div>
-        )}
-      </div>
+  <div className="mt-6 flex flex-col space-y-6">
+    <div className="flex gap-4 ">
+        <AttendanceDate />
+       <AttendanceSummary
+                present={presentCount}
+                absent={absentCount}
+                rate={rate}
+              />
+          
     </div>
+
+     <div className="bg-white p-6 rounded-2xl shadow-xl shadow-[#00000009] ">
+          
+         
+
+              <div className="flex  items-center justify-between">
+                <div className="">
+                        <h2 className="text-2xl">Mark Attendance</h2>
+                        <p className='text-sm text-gray-500 mb-6'>Click on a child to toggle their attendance status</p>
+                </div>
+                  <button className="border border-gray-200 bg-white text-gray-800 px-4 py-2 rounded-lg hover:bg-gray-50 transition-colors flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-download mr-2 h-4 w-4"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" x2="12" y1="15" y2="3"></line></svg>
+                    Export Report
+                  </button>
+              </div>
+            
+              
+              {/* Search and Filter Bar */}
+              <div className="grid  grid-cols-1 md:grid-cols-12 gap-4 mb-2">
+                {/* Search Input - Full width on mobile, 6 cols on desktop */}
+                <div className='md:col-span-10'>
+                  <label htmlFor="search" className="block text-gray-700 mb-1">
+                    Search Children
+                  </label>
+                  <input
+                    type="text"
+                    id="search"
+                    placeholder="Search by name..."
+                    className="w-full p-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                  />
+                </div>
+
+              
+
+                {/* Attendance Filter - Full width on mobile, 3 cols on desktop */}
+                <div className='md:col-span-2'>
+                  <label htmlFor="attendance" className="block text-gray-700 mb-1">
+                    Attendance
+                  </label>
+                  <select
+                    id="attendance"
+                    className="w-full p-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
+                    value={selectedAttendance}
+                    onChange={(e) => setSelectedAttendance(e.target.value)}
+                  >
+                    {attendanceOptions.map(option => (
+                      <option key={option} value={option}>{option}</option>
+                    ))}
+                  </select>
+                </div>
+              </div>
+
+              {/* Table Header - Hidden on mobile */}
+              <div className="grid grid-cols-12 gap-2 p-3 mb-0 rounded-t-lg border text-gray-500 border-gray-200 text-sm">
+                <div className="col-span-0">#</div>
+                <div className="col-span-2 ">Photo</div>
+                <div className="col-span-4 ">Name</div>
+                <div className="col-span-3  ">Age Group</div>
+                <div className="col-span-2 ">Status</div>
+              </div>
+              
+              {/* Children List */}
+              <div className="divide-y divide-gray-200">
+                {filteredChildren.length > 0 ? (
+                  filteredChildren.map((child) => (
+                    <ListInfo
+                      key={child.id}
+                      {...child}
+                      onToggleAttendance={() => toggleAttendance(child.id)}
+
+                    />
+                  ))
+                ) : (
+                  <div className="p-4 text-center text-gray-500">
+                    No children match your search criteria
+                  </div>
+                )}
+              </div>
+     </div>
+
+  </div>
   )
 }
 

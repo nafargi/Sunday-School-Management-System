@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { CheckCircleIcon, XCircleIcon } from '@heroicons/react/24/solid';
 // Import all images for age1 (Little Lights)
 import child1 from '../../assets/age1/1.jpg';
 import child2 from '../../assets/age1/2.jpg';
@@ -77,15 +78,15 @@ const imageMap = {
   'age5/30': child30
 };
 
-const ListIInfo = ({ id, photo, folder, name, age, ageGroup, attendance, emergencyContact, onClick }) => {
+const ListIInfo = ({ id, photo, folder, name,ageGroup,attendance, onToggleAttendance  }) => {
   const imageKey = `${folder}/${photo}`;
   const imageSrc = imageMap[imageKey] || null;
+  
 
   return (
     <div className='flex items-center   hover:bg-gray-50 '>
 
-      <div className="grid grid-cols-12 gap-2 p-3  w-full justify-center border-l border-r border-b border-gray-200 "
-      onClick={onClick}>
+      <div className="grid grid-cols-12 gap-2 p-3  w-full justify-center border-l border-r border-b border-gray-200 ">
         <div className="col-span-0 flex items-center">
             <p className="w-8  text-gray-500">{id}</p>
         </div>
@@ -110,10 +111,21 @@ const ListIInfo = ({ id, photo, folder, name, age, ageGroup, attendance, emergen
           <p className='  text-gray-700'>{ageGroup}</p>
         </div>
         
-        <div className="col-span-2 flex items-center ">
-          <p className={`  ${attendance === 'Present' ? 'text-green-600' : 'text-red-600'}`}>
-            {attendance}
-          </p>
+         <div
+          onClick={onToggleAttendance}
+          className="col-span-2 flex items-center cursor-pointer space-x-2"
+        >
+          {attendance === 'Present' ? (
+            <>
+              <CheckCircleIcon className="w-5 h-5 text-green-500" />
+              <p className="text-green-600">Present</p>
+            </>
+          ) : (
+            <>
+              <XCircleIcon className="w-5 h-5 text-red-500" />
+              <p className="text-red-600">Absent</p>
+            </>
+          )}
         </div>
         
         
