@@ -1,12 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
+import TabSwitcher from '../components/children/TabSwitcher';
+import ListViewTab from '../components/children/ListViewTab';
+import GridViewTab from '../components/children/GridViewTab';
+import ChildHeader from '../components/children/ChildHeader';
 
 const Children = () => {
+  const [activeTab, setActiveTab] = useState('List View');
+
+  const renderTab = () => {
+    switch (activeTab) {
+      case 'Gird View':
+        return <GridViewTab />;
+      default:
+        return <ListViewTab />;
+    }
+  };
+
   return (
-    <div>
-      <h1 className="text-2xl font-bold text-gray-800">Children Directory</h1>
-      <p className="mt-2 text-gray-600">
-        Manage the list of children registered in your Sunday school. You can add new profiles, edit existing ones, and track their class progress.
-      </p>
+    <div className="p-6">
+      <ChildHeader />
+      <TabSwitcher activeTab={activeTab} setActiveTab={setActiveTab} />
+      {renderTab()}
     </div>
   );
 };
