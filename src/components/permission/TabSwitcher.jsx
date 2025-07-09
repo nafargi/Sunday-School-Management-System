@@ -1,5 +1,5 @@
 const TabSwitcher = ({ activeTab, setActiveTab }) => {
-  const tabs = ['All Children', 'Missing Permissions', 'Permisssion History'];
+  const tabs = ['All Children', 'Missing Permissions', 'Permission History'];
 
   return (
     <div className="mt-4 flex space-x-4 bg-white inline-block rounded-lg ">
