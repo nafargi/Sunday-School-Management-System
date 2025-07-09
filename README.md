@@ -5,7 +5,7 @@
 
 *A digital solution for nurturing young believers through organized, faith-based education*
 
-![Dashboard Preview](../sunday-school-ms/src/assets/screenshots/1.png)
+![Dashboard Preview](./screenshots/1.png)
 
 ---
 
@@ -84,13 +84,13 @@ This application serves Christian Sunday Schools by providing tools to manage st
 
 | Feature        | Preview Image                              |
 | -------------- | ------------------------------------------ |
-| Dashboard      | ![Dashboard](../sunday-school-ms/src/assets/screenshots/1.png)   |
-| Attendance     | ![Attendance](../sunday-school-ms/src/assets/screenshots/2.png)  |
-| Permissions    | ![Permissions](../sunday-school-ms/src/assets/screenshots/3.png) |
-| Lesson Planner | ![Lessons](../sunday-school-ms/src/assets/screenshots/4.png)     |
-| Age Group View | ![Groups](../sunday-school-ms/src/assets/screenshots/5.png)      |
-| Emergency Info | ![Emergency](../sunday-school-ms/src/assets/screenshots/6.png)   |
-| Reports        | ![Reports](../sunday-school-ms/src/assets/screenshots/7.png)     |
+| Dashboard      | ![Dashboard](./screenshots/1.png)   |
+| Attendance     | ![Attendance](./screenshots/2.png)  |
+| Permissions    | ![Permissions](./screenshots/3.png) |
+| Lesson Planner | ![Lessons](./screenshots/4.png)     |
+| Age Group View | ![Groups](./screenshots/5.png)      |
+| Emergency Info | ![Emergency](./screenshots/6.png)   |
+| Reports        | ![Reports](./screenshots/7.png)     |
 
 ---
 
