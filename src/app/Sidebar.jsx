@@ -25,7 +25,7 @@ const SidebarLink = ({ to, label, Icon }) => (
       }`
     }
   >
-    <Icon className="w-5 h-5 mr-3 text-gray-400 group-hover:text-[#7C3BED]" />
+    <Icon className="w-5 h-5 mr-3 font-semibold text-gray-400 group-hover:text-[#7C3BED]" />
     {label}
   </NavLink>
 );

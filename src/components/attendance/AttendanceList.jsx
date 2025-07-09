@@ -344,10 +344,10 @@ const childrenData = [
   const rate = Math.round((presentCount / children.length) * 100);
 
   return (
-  <div className="mt-6 flex flex-col space-y-6">
+  <div className="mt-6 flex flex-col space-y-4">
     <div className="flex gap-4 ">
         <AttendanceDate />
-       <AttendanceSummary
+        <AttendanceSummary
                 present={presentCount}
                 absent={absentCount}
                 rate={rate}
@@ -356,9 +356,6 @@ const childrenData = [
     </div>
 
      <div className="bg-white p-6 rounded-2xl shadow-xl shadow-[#00000009] ">
-          
-         
-
               <div className="flex  items-center justify-between">
                 <div className="">
                         <h2 className="text-2xl">Mark Attendance</h2>
