@@ -43,8 +43,8 @@ const EmergencyList = () => {
       </div>
 
       {/* Table */}
-      <div className="overflow-x-auto">
-        <table className="min-w-full bg-white border border-gray-200">
+      <div className="border overflow-x-auto border-gray-200 rounded-lg overflow-hidden">
+        <table className="min-w-full bg-white   ">
           <thead className="bg-gray-50">
             <tr>
               <th className="py-3 px-4 text-left text-sm font-normal text-gray-500">Photo</th>
@@ -89,10 +89,10 @@ const EmergencyList = () => {
                   )}
                 </td>
                 <td className="py-4 px-4 text-sm text-gray-800">{child.basic_info.medical_notes}</td>
-                <td className="py-4 px-4 text-sm">
+                <td className="py-2 px-2 text-sm">
                   <button
                     onClick={() => openDetails(child)}
-                    className="text-gray-600 hover:text-gray-800 border border-gray-200 p-2 rounded-sm hover:bg-gray-50 transition duration-200"
+                    className="text-gray-600 hover:text-gray-800 border border-gray-200 px-2 py-1 rounded-lg hover:bg-gray-50 transition duration-200"
                   >
                     View Details
                   </button>
@@ -108,7 +108,7 @@ const EmergencyList = () => {
         <div className="fixed inset-0 bg-[#f706ff08] bg-opacity-50 flex items-center justify-center p-4 z-30">
           <div className="bg-white rounded-lg shadow-xl w-full max-w-4xl max-h-[90vh] overflow-auto mt-10 mx-auto">
             {/* Dialog Header */}
-            <div className="border-b border-gray-200 p-6">
+            <div className=" p-6">
               <h2 className="text-xl  text-gray-800">
                 Emergency Information
               </h2>
@@ -118,23 +118,23 @@ const EmergencyList = () => {
             </div>
 
             {/* Tabs */}
-            <div className="border-b border-gray-200">
-              <nav className=" inline-block px-6 ">
+            <div className=" px-6 rounded-lg">
+              <nav className="flex justify-between rounded-lg bg-purple-50 p-1">
                 <button
                   onClick={() => setActiveTab('emergency-contacts')}
-                  className={`py-2  px-6 text-center border-b-2 font-medium text-sm ${activeTab === 'emergency-contacts' ? 'border-[#7C3BED] rounded-lg bg-[#7C3BED] text-[#ffffff]' : 'border-transparent text-gray-500 hover:text-gray-700'}`}
+                  className={`py-1  px-2 text-center border-b-2  text-sm ${activeTab === 'emergency-contacts' ? 'border-[#7C3BED] rounded-lg bg-[#7C3BED] text-[#ffffff]' : 'border-transparent text-gray-500 hover:text-gray-700'}`}
                 >
                   Emergency Contacts
                 </button>
                 <button
                   onClick={() => setActiveTab('medical-information')}
-                  className={`py-2 px-6 text-center border-b-2 font-medium text-sm ${activeTab === 'medical-information' ? 'border-[#7C3BED] rounded-lg bg-[#7C3BED] text-[#ffffff]' : 'border-transparent text-gray-500 hover:text-gray-700'}`}
+                  className={`py-1 px-2 text-center border-b-2  text-sm ${activeTab === 'medical-information' ? 'border-[#7C3BED] rounded-lg bg-[#7C3BED] text-[#ffffff]' : 'border-transparent text-gray-500 hover:text-gray-700'}`}
                 >
                   Medical Information
                 </button>
                 <button
                   onClick={() => setActiveTab('authorizations')}
-                  className={`py-2 px-6 text-center border-b-2  font-medium text-sm ${activeTab === 'authorizations' ? 'border-[#7C3BED] rounded-lg bg-[#7C3BED] text-[#ffffff]' : 'border-transparent text-gray-500 hover:text-gray-700'}`}
+                  className={`py-1 px-2 text-center border-b-2   text-sm ${activeTab === 'authorizations' ? 'border-[#7C3BED] rounded-lg bg-[#7C3BED] text-[#ffffff]' : 'border-transparent text-gray-500 hover:text-gray-700'}`}
                 >
                   Authorizations
                 </button>
@@ -145,7 +145,7 @@ const EmergencyList = () => {
             <div className="p-6">
               {activeTab === 'emergency-contacts' && (
                 <div>
-                  <h3 className="text-lg font-medium text-gray-900 mb-4">Primary Contact</h3>
+                  <h3 className="text-lg  text-gray-900 mb-4">Primary Contact</h3>
                   <div className="grid grid-cols-2 gap-4 mb-6">
                     <div>
                       <p className="text-sm text-gray-500">Name</p>
@@ -171,7 +171,7 @@ const EmergencyList = () => {
                     </div>
                   </div>
 
-                  <h3 className="text-lg font-medium text-gray-900 mb-4">Secondary Contact</h3>
+                  <h3 className="text-lg  text-gray-900 mb-4">Secondary Contact</h3>
                   <div className="grid grid-cols-2 gap-4">
                     <div>
                       <p className="text-sm text-gray-500">Name</p>
@@ -197,7 +197,7 @@ const EmergencyList = () => {
 
               {activeTab === 'medical-information' && (
                 <div>
-                  <h3 className="text-lg font-medium text-gray-900 mb-4">Medical Information</h3>
+                  <h3 className="text-lg  text-gray-900 mb-4">Medical Information</h3>
                   <div className="grid grid-cols-2 gap-4 mb-6">
                     <div>
                       <p className="text-sm text-gray-500">Allergies</p>
@@ -219,7 +219,7 @@ const EmergencyList = () => {
                     </div>
                   </div>
 
-                  <h3 className="text-lg font-medium text-gray-900 mb-4">Doctor Information</h3>
+                  <h3 className="text-lg  text-gray-900 mb-4">Doctor Information</h3>
                   <div className="grid grid-cols-2 gap-4">
                     <div>
                       <p className="text-sm text-gray-500">Doctor Name</p>
@@ -243,7 +243,7 @@ const EmergencyList = () => {
 
               {activeTab === 'authorizations' && (
                 <div>
-                  <h3 className="text-lg font-medium text-gray-900 mb-4">Emergency Authorizations</h3>
+                  <h3 className="text-lg  text-gray-900 mb-4">Emergency Authorizations</h3>
                   <div className="grid grid-cols-2 gap-4 mb-6">
                     <div>
                       <p className="text-sm text-gray-500">Hospital Authorization</p>
@@ -259,7 +259,7 @@ const EmergencyList = () => {
                     </div>
                   </div>
 
-                  <h3 className="text-lg font-medium text-gray-900 mb-4">Authorized for Pickup</h3>
+                  <h3 className="text-lg  text-gray-900 mb-4">Authorized for Pickup</h3>
                   <ul className="space-y-2">
                     {selectedChild.detailed_info.authorizations.authorized_pickup.map((person, index) => (
                       <li key={index} className="text-gray-900">{person}</li>
@@ -274,7 +274,7 @@ const EmergencyList = () => {
               <button
                 type="button"
                 onClick={closeDetails}
-                className="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-blue-600 text-base font-medium text-white hover:bg-blue-700 focus:outline-none sm:ml-3 sm:w-auto sm:text-sm"
+                className="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-1  text-base font-medium text-gray-900 hover:bg-gray-50 focus:outline-none sm:ml-3 sm:w-auto sm:text-sm"
               >
                 Close
               </button>
