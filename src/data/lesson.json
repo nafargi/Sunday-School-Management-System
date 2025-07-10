@@ -1,103 +1,382 @@
-[
+ [
     {
       "id": 1,
       "title": "Creation (Genesis 1-2)",
-      "type": "Genesis Story",
-      "date": "2025-01-19", 
+      "teacher": "Mekdes Gebre",
+      "date": "2025-05-18",
+      "time": "9:30 AM (45 min)",
       "location": "Main Hall",
+      "age_group": "Little Lights",
       "status": "Upcoming",
-      "actions": "Open menu",
-      "cultural_note": "Taught during Timket celebrations in Ethiopia"
+      "actions": "View Details",
+      "detail_view": {
+        "overview": {
+          "description": "Teach the 7 days of creation with Ethiopian nature examples.",
+          "basic_info": {
+            "date": "2025-05-18",
+            "time": "9:30 AM (45 min)",
+            "teacher": "Mekdes Gebre",
+            "age_group": "Little Lights"
+          }
+        },
+        "materials": [
+          "Amharic Children's Bible",
+          "Creation coloring sheets",
+          "Ethiopian coffee beans for Day 3",
+          "Sun/moon illustrations (Ethiopian calendar)"
+        ],
+        "objectives": [
+          "Identify God as Creator of all things",
+          "Memorize the 7 days of creation",
+          "Appreciate Ethiopian biodiversity as God's design"
+        ],
+        "lesson_details": [
+          "Day 1: Light/Darkness (Compare Ethiopian sunrises)",
+          "Day 3: Plants (Show coffee, teff, enset)",
+          "Day 6: Humans (Discuss Adam & Eve in Ethiopian art)"
+        ]
+      }
     },
     {
       "id": 2,
       "title": "Noah's Ark (Genesis 6-9)",
-      "type": "Flood Narrative",
-      "date": "2025-03-10",
-      "location": "Children's Chapel",
+      "teacher": "Tewodros Kassahun",
+      "date": "2025-06-15",
+      "time": "10:00 AM (60 min)",
+      "location": "Outdoor Tent",
+      "age_group": "Young Explorers",
       "status": "Planning",
-      "actions": "Open menu",
-      "cultural_note": "Rainbow symbolism used in Ethiopian Sunday schools"
+      "actions": "View Details",
+      "detail_view": {
+        "overview": {
+          "description": "Explore Noah's obedience with Ethiopian floodplain examples.",
+          "basic_info": {
+            "date": "2025-06-15",
+            "time": "10:00 AM (60 min)",
+            "teacher": "Tewodros Kassahun",
+            "age_group": "Young Explorers"
+          }
+        },
+        "materials": [
+          "Miniature ark (Ethiopian woodcraft style)",
+          "Animal figurines (Gelada baboon, Walia ibex)",
+          "Blue fabric for flood simulation",
+          "Rainbow craft materials"
+        ],
+        "objectives": [
+          "Understand God's covenant through rainbows",
+          "Learn about clean/unclean animals in Ethiopian context",
+          "Practice obedience like Noah"
+        ],
+        "lesson_details": [
+          "Ethiopian rainy season introduction",
+          "Ark dimensions (compare to traditional tukul)",
+          "Rainbow promise (link to Ethiopian flag colors)"
+        ]
+      }
     },
     {
       "id": 3,
       "title": "Abraham's Sacrifice (Genesis 22)",
-      "type": "Patriarch Story",
-      "date": "2025-04-25",
-      "location": "Outdoor Amphitheater",
+      "teacher": "Selamawit Bekele",
+      "date": "2025-07-20",
+      "time": "2:00 PM (50 min)",
+      "location": "Chapel",
+      "age_group": "Kingdom Leaders",
       "status": "Upcoming",
-      "actions": "Open menu",
-      "cultural_note": "Connects to Ethiopian Orthodox fasting traditions"
+      "actions": "View Details",
+      "detail_view": {
+        "overview": {
+          "description": "Abraham's test of faith with Ethiopian highland visuals.",
+          "basic_info": {
+            "date": "2025-07-20",
+            "time": "2:00 PM (50 min)",
+            "teacher": "Selamawit Bekele",
+            "age_group": "Kingdom Leaders"
+          }
+        },
+        "materials": [
+          "Ram figurine (Ethiopian sheep variety)",
+          "Mountain backdrop (Semen Mountains)",
+          "Firewood props",
+          "Covenant scroll replica"
+        ],
+        "objectives": [
+          "Learn sacrificial obedience",
+          "Understand God's provision",
+          "Connect to Ethiopian Orthodox tabot tradition"
+        ],
+        "lesson_details": [
+          "Journey to Moriah (compare to Ethiopian pilgrimages)",
+          "Ram substitution object lesson",
+          "Covenant renewal ceremony"
+        ]
+      }
     },
     {
       "id": 4,
       "title": "Joseph in Egypt (Genesis 37-50)",
-      "type": "Diaspora Story",
-      "date": "2025-06-15",
-      "location": "Classroom 3",
-      "status": "Upcoming",
-      "actions": "Open menu",
-      "cultural_note": "Popular in Eritrean refugee ministry programs"
+      "teacher": "Yohannes Assefa",
+      "date": "2025-08-10",
+      "time": "11:00 AM (60 min)",
+      "location": "Classroom 2",
+      "age_group": "Bright Stars",
+      "status": "Planning",
+      "actions": "View Details",
+      "detail_view": {
+        "overview": {
+          "description": "Joseph's journey with parallels to Ethiopian diaspora.",
+          "basic_info": {
+            "date": "2025-08-10",
+            "time": "11:00 AM (60 min)",
+            "teacher": "Yohannes Assefa",
+            "age_group": "Bright Stars"
+          }
+        },
+        "materials": [
+          "Colorful coat replica",
+          "Ancient Egypt map (with Ethiopian connections)",
+          "Grain sacks",
+          "Forgiveness activity cards"
+        ],
+        "objectives": [
+          "Understand God's sovereignty in hard times",
+          "Learn forgiveness through Joseph's example",
+          "Discuss Ethiopian family values"
+        ],
+        "lesson_details": [
+          "Joseph's dreams (Ethiopian dream interpretation)",
+          "Prison experience (compare to Ethiopian refugees)",
+          "Family reconciliation scene"
+        ]
+      }
     },
     {
       "id": 5,
       "title": "Moses & the Exodus (Exodus 14)",
-      "type": "Liberation Story",
-      "date": "2025-04-27", 
+      "teacher": "Rahel Teshome",
+      "date": "2025-09-05",
+      "time": "3:00 PM (45 min)",
       "location": "Main Hall",
-      "status": "Completed",
-      "actions": "Open menu",
-      "cultural_note": "Celebrated during Fasika with special hymns"
+      "age_group": "Faith Champions",
+      "status": "Upcoming",
+      "actions": "View Details",
+      "detail_view": {
+        "overview": {
+          "description": "Liberation story with Ethiopian Passover connections.",
+          "basic_info": {
+            "date": "2025-09-05",
+            "time": "3:00 PM (45 min)",
+            "teacher": "Rahel Teshome",
+            "age_group": "Faith Champions"
+          }
+        },
+        "materials": [
+          "Staff prop (like Ethiopian shepherd's stick)",
+          "Red fabric for 'Red Sea'",
+          "Plague illustrations",
+          "Fasika (Ethiopian Easter) timeline"
+        ],
+        "objectives": [
+          "Identify God as Deliverer",
+          "Learn about the 10 plagues",
+          "Connect to Ethiopian Fasika celebrations"
+        ],
+        "lesson_details": [
+          "Baby Moses (Ethiopian basket-weaving demo)",
+          "Plagues (cultural sensitivity adaptations)",
+          "Red Sea crossing (interactive reenactment)"
+        ]
+      }
     },
     {
       "id": 6,
       "title": "David & Goliath (1 Samuel 17)",
-      "type": "Heroic Narrative",
-      "date": "2025-07-20",
-      "location": "Youth Tent",
+      "teacher": "Dawit Solomon",
+      "date": "2025-10-12",
+      "time": "10:30 AM (50 min)",
+      "location": "Church Lawn",
+      "age_group": "Young Explorers",
       "status": "Planning",
-      "actions": "Open menu",
-      "cultural_note": "Taught with traditional Ethiopian warrior analogies"
+      "actions": "View Details",
+      "detail_view": {
+        "overview": {
+          "description": "Courage lesson with Ethiopian warrior culture parallels.",
+          "basic_info": {
+            "date": "2025-10-12",
+            "time": "10:30 AM (50 min)",
+            "teacher": "Dawit Solomon",
+            "age_group": "Young Explorers"
+          }
+        },
+        "materials": [
+          "Sling props (traditional Ethiopian style)",
+          "Giant Goliath cutout",
+          "River stones",
+          "Bravery certificates"
+        ],
+        "objectives": [
+          "Learn courage through David's example",
+          "Understand God's power over giants",
+          "Discuss Ethiopian historical battles"
+        ],
+        "lesson_details": [
+          "Shepherd background (Ethiopian herding context)",
+          "Five smooth stones object lesson",
+          "Victory celebration (Ethiopian eskista dance)"
+        ]
+      }
     },
     {
       "id": 7,
-      "title": "The Good Samaritan (Luke 10)",
-      "type": "Parable",
-      "date": "2025-05-30",
-      "location": "Fellowship Hall",
+      "title": "Daniel in the Lion's Den (Daniel 6)",
+      "teacher": "Daniel Mekuria",
+      "date": "2025-11-08",
+      "time": "9:00 AM (45 min)",
+      "location": "Classroom 1",
+      "age_group": "Little Lights",
       "status": "Upcoming",
-      "actions": "Open menu",
-      "cultural_note": "Adapted with Ethiopian regional neighbor examples"
+      "actions": "View Details",
+      "detail_view": {
+        "overview": {
+          "description": "Faithfulness lesson with Ethiopian prayer practices.",
+          "basic_info": {
+            "date": "2025-11-08",
+            "time": "9:00 AM (45 min)",
+            "teacher": "Daniel Mekuria",
+            "age_group": "Little Lights"
+          }
+        },
+        "materials": [
+          "Lion masks",
+          "Prayer rug (similar to Ethiopian meqomia)",
+          "Royal decree scroll",
+          "Angel figurine"
+        ],
+        "objectives": [
+          "Learn consistency in prayer",
+          "Understand God's protection",
+          "Practice Ethiopian Orthodox prayer postures"
+        ],
+        "lesson_details": [
+          "Daniel's routine (compare to Ethiopian mezmur times)",
+          "Lion's den reenactment",
+          "King Darius' regret scene"
+        ]
+      }
     },
     {
       "id": 8,
-      "title": "Jesus Feeds 5000 (John 6)",
-      "type": "Miracle",
-      "date": "2025-08-12",  
-      "location": "Church Lawn",
-      "status": "Upcoming",
-      "actions": "Open menu",
-      "cultural_note": "Demonstrated with injera bread visuals"
+      "title": "Jonah & the Big Fish (Jonah 1-4)",
+      "teacher": "Yonas Tadesse",
+      "date": "2025-12-06",
+      "time": "2:00 PM (60 min)",
+      "location": "Fellowship Hall",
+      "age_group": "Bright Stars",
+      "status": "Planning",
+      "actions": "View Details",
+      "detail_view": {
+        "overview": {
+          "description": "Obedience lesson with Red Sea/Indian Ocean connections.",
+          "basic_info": {
+            "date": "2025-12-06",
+            "time": "2:00 PM (60 min)",
+            "teacher": "Yonas Tadesse",
+            "age_group": "Bright Stars"
+          }
+        },
+        "materials": [
+          "Boat model (like Ethiopian tankwas)",
+          "Whale plush toy",
+          "Nineveh map",
+          "Repentance activity sheets"
+        ],
+        "objectives": [
+          "Learn about God's mercy",
+          "Understand consequences of disobedience",
+          "Discuss Ethiopian fasting as repentance"
+        ],
+        "lesson_details": [
+          "Storm at sea (Ethiopian rainy season comparison)",
+          "Whale's belly sensory activity",
+          "Nineveh's repentance (modern parallels)"
+        ]
+      }
     },
     {
       "id": 9,
-      "title": "The Ethiopian Eunuch (Acts 8)",
-      "type": "New Testament",
-      "date": "2025-09-28", 
+      "title": "The Good Samaritan (Luke 10)",
+      "teacher": "Samrawit Ashenafi",
+      "date": "2026-01-10",
+      "time": "11:00 AM (45 min)",
       "location": "Sanctuary",
+      "age_group": "Kingdom Leaders",
       "status": "Planning",
-      "actions": "Open menu",
-      "cultural_note": "Special focus for Eritrean/Ethiopian heritage lessons"
+      "actions": "View Details",
+      "detail_view": {
+        "overview": {
+          "description": "Compassion lesson with Ethiopian community values.",
+          "basic_info": {
+            "date": "2026-01-10",
+            "time": "11:00 AM (45 min)",
+            "teacher": "Samrawit Ashenafi",
+            "age_group": "Kingdom Leaders"
+          }
+        },
+        "materials": [
+          "Road to Jericho backdrop",
+          "Bandage props",
+          "Ethiopian birr coins for 'inn payment'",
+          "Community helper cards"
+        ],
+        "objectives": [
+          "Learn to show mercy to all people",
+          "Identify modern 'Samaritans' in Ethiopia",
+          "Practice Ethiopian mahber traditions"
+        ],
+        "lesson_details": [
+          "Cultural tensions explanation",
+          "Role-play different characters",
+          "Modern application: Helping refugees"
+        ]
+      }
     },
     {
       "id": 10,
-      "title": "Armor of God (Ephesians 6)",
-      "type": "Epistle Lesson",
-      "date": "2025-11-15",
-      "location": "Classroom 1",
+      "title": "The Ethiopian Eunuch (Acts 8)",
+      "teacher": "Philipos Alemayehu",
+      "date": "2026-02-14",
+      "time": "10:00 AM (60 min)",
+      "location": "Main Hall",
+      "age_group": "Faith Champions",
       "status": "Upcoming",
-      "actions": "Open menu",
-      "cultural_note": "Taught with Ethiopian traditional shield artifacts"
+      "actions": "View Details",
+      "detail_view": {
+        "overview": {
+          "description": "Salvation story featuring Ethiopia's biblical connection.",
+          "basic_info": {
+            "date": "2026-02-14",
+            "time": "10:00 AM (60 min)",
+            "teacher": "Philipos Alemayehu",
+            "age_group": "Faith Champions"
+          }
+        },
+        "materials": [
+          "Ancient scroll replica",
+          "Chariot drawing activity",
+          "Water basin for baptism demo",
+          "Ethiopian Ge'ez Bible facsimile"
+        ],
+        "objectives": [
+          "Understand baptism's importance",
+          "Learn Ethiopia's role in early Christianity",
+          "Practice sharing faith simply"
+        ],
+        "lesson_details": [
+          "Queen Candace's historical context",
+          "Isaiah 53 study (Ethiopian Orthodox emphasis)",
+          "Modern evangelism applications"
+        ]
+      }
     }
   ]
- 

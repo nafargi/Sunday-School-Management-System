@@ -1,11 +1,15 @@
 // pages/Lessons.jsx
 import React from 'react';
+import LessonHeader from '../components/Lessons/LessonHeader';
+import LessonView from '../components/Lessons/LessonView';
 
 const Lessons = () => {
   return (
     <div>
-      <h1 className="text-2xl font-bold text-gray-800">Lessons</h1>
-      <p className="mt-2 text-gray-600">Here you can manage Sunday school lessons.</p>
+      <div className="p-6">
+         <LessonHeader />
+        <LessonView />
+      </div>
     </div>
   );
 };
