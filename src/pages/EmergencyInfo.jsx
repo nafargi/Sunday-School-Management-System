@@ -1,12 +1,13 @@
 import React from 'react';
-
+import EmergencyHeader from '../components/emergency/EmergencyHeader'; 
+import EmergencyList from '../components/emergency/EmergencyList'; // Adjust the path as necessary
 const EmergencyInfo = () => {
   return (
     <div>
-      <h1 className="text-2xl font-bold text-gray-800">Emergency Information</h1>
-      <p className="mt-2 text-gray-600">
-        Quickly access emergency contacts and medical notes for each student. Ensure a safe environment with up-to-date records.
-      </p>
+      <div className="p-6">
+        <EmergencyHeader />
+        <EmergencyList />
+      </div>
     </div>
   );
 };

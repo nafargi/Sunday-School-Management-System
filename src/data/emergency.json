@@ -1,0 +1,552 @@
+ [
+    {
+      "id": 1,
+      "name": "Yordanos Tesfaye",
+      "photo": "/assets/age2/6.jpg",
+      "age_group": "Little Angels",
+      "basic_info": {
+        "emergency_contact": {
+          "name": "Mekdes Tesfaye",
+          "relation": "Mother",
+          "phone": "+251 91 123 4567"
+        },
+        "allergies": ["None"],
+        "medical_notes": "No specific concerns"
+      },
+      "detailed_info": {
+        "emergency_contacts": {
+          "primary": {
+            "name": "Mekdes Tesfaye",
+            "relation": "Mother",
+            "primary_phone": "+251 91 123 4567",
+            "secondary_phone": "+251 91 987 6543",
+            "email": "mekdes.t@example.com",
+            "address": "123 Addis Ababa, Ethiopia"
+          },
+          "secondary": {
+            "name": "Tesfaye Wolde",
+            "relation": "Father",
+            "primary_phone": "+251 92 234 5678",
+            "secondary_phone": null,
+            "email": "tesfaye.w@example.com",
+            "address": "123 Addis Ababa, Ethiopia"
+          }
+        },
+        "medical_information": {
+          "allergies": ["None"],
+          "medications": ["None"],
+          "conditions": ["None"],
+          "doctor": {
+            "name": "Dr. Alemayehu Kebede",
+            "phone": "+251 11 345 6789",
+            "insurance": "Ethio Insurance #12345678"
+          },
+          "last_updated": "2025-04-15"
+        },
+        "authorizations": {
+          "hospital_transport": true,
+          "emergency_treatment": true,
+          "authorized_pickup": [
+            "Mekdes Tesfaye (Mother)",
+            "Tesfaye Wolde (Father)",
+            "Grandmother (Aster Tesfaye)"
+          ]
+        }
+      }
+    },
+    {
+      "id": 2,
+      "name": "Eyob Assefa",
+      "photo": "/assets/age2/8.jpg",
+      "age_group": "Young Explorers",
+      "basic_info": {
+        "emergency_contact": {
+          "name": "Tigist Assefa",
+          "relation": "Mother",
+          "phone": "+251 92 234 5678"
+        },
+        "allergies": ["Peanuts"],
+        "medical_notes": "Carries EpiPen"
+      },
+      "detailed_info": {
+        "emergency_contacts": {
+          "primary": {
+            "name": "Tigist Assefa",
+            "relation": "Mother",
+            "primary_phone": "+251 92 234 5678",
+            "secondary_phone": "+251 92 876 5432",
+            "email": "tigist.a@example.com",
+            "address": "456 Bole Road, Addis Ababa"
+          },
+          "secondary": {
+            "name": "Assefa Demissie",
+            "relation": "Father",
+            "primary_phone": "+251 93 345 6789",
+            "secondary_phone": null,
+            "email": "assefa.d@example.com",
+            "address": "456 Bole Road, Addis Ababa"
+          }
+        },
+        "medical_information": {
+          "allergies": ["Peanuts"],
+          "medications": ["EpiPen"],
+          "conditions": ["Severe nut allergy"],
+          "doctor": {
+            "name": "Dr. Selamawit Bekele",
+            "phone": "+251 11 456 7890",
+            "insurance": "Nyala Insurance #23456789"
+          },
+          "last_updated": "2025-04-10"
+        },
+        "authorizations": {
+          "hospital_transport": true,
+          "emergency_treatment": true,
+          "authorized_pickup": [
+            "Tigist Assefa (Mother)",
+            "Assefa Demissie (Father)",
+            "Aunt (Eyerusalem Assefa)"
+          ]
+        }
+      }
+    },
+    {
+      "id": 3,
+      "name": "Selamawit Girma",
+      "photo": "/assets/age2/7.jpg",
+      "age_group": "Little Angels",
+      "basic_info": {
+        "emergency_contact": {
+          "name": "Girma Wolde",
+          "relation": "Father",
+          "phone": "+251 93 345 6789"
+        },
+        "allergies": ["None"],
+        "medical_notes": "Asthma, has inhaler"
+      },
+      "detailed_info": {
+        "emergency_contacts": {
+          "primary": {
+            "name": "Girma Wolde",
+            "relation": "Father",
+            "primary_phone": "+251 93 345 6789",
+            "secondary_phone": "+251 93 765 4321",
+            "email": "girma.w@example.com",
+            "address": "789 Kirkos, Addis Ababa"
+          },
+          "secondary": {
+            "name": "Aster Girma",
+            "relation": "Mother",
+            "primary_phone": "+251 94 456 7890",
+            "secondary_phone": null,
+            "email": "aster.g@example.com",
+            "address": "789 Kirkos, Addis Ababa"
+          }
+        },
+        "medical_information": {
+          "allergies": ["None"],
+          "medications": ["Inhaler"],
+          "conditions": ["Asthma"],
+          "doctor": {
+            "name": "Dr. Yohannes Tadesse",
+            "phone": "+251 11 567 8901",
+            "insurance": "Awash Insurance #34567890"
+          },
+          "last_updated": "2025-04-12"
+        },
+        "authorizations": {
+          "hospital_transport": true,
+          "emergency_treatment": true,
+          "authorized_pickup": [
+            "Girma Wolde (Father)",
+            "Aster Girma (Mother)",
+            "Uncle (Dawit Girma)"
+          ]
+        }
+      }
+    },
+    {
+      "id": 4,
+      "name": "Mikias Abebe",
+      "photo": "/assets/age2/9.jpg",
+      "age_group": "Kingdom Leaders",
+      "basic_info": {
+        "emergency_contact": {
+          "name": "Frehiwot Abebe",
+          "relation": "Mother",
+          "phone": "+251 94 456 7890"
+        },
+        "allergies": ["Dairy"],
+        "medical_notes": "Lactose intolerant"
+      },
+      "detailed_info": {
+        "emergency_contacts": {
+          "primary": {
+            "name": "Frehiwot Abebe",
+            "relation": "Mother",
+            "primary_phone": "+251 94 456 7890",
+            "secondary_phone": "+251 94 654 3210",
+            "email": "frehiwot.a@example.com",
+            "address": "321 Arat Kilo, Addis Ababa"
+          },
+          "secondary": {
+            "name": "Abebe Kebede",
+            "relation": "Father",
+            "primary_phone": "+251 95 567 8901",
+            "secondary_phone": null,
+            "email": "abebe.k@example.com",
+            "address": "321 Arat Kilo, Addis Ababa"
+          }
+        },
+        "medical_information": {
+          "allergies": ["Dairy"],
+          "medications": ["Lactase supplements"],
+          "conditions": ["Lactose intolerance"],
+          "doctor": {
+            "name": "Dr. Bethlehem Getachew",
+            "phone": "+251 11 678 9012",
+            "insurance": "Nib Insurance #45678901"
+          },
+          "last_updated": "2025-04-08"
+        },
+        "authorizations": {
+          "hospital_transport": true,
+          "emergency_treatment": true,
+          "authorized_pickup": [
+            "Frehiwot Abebe (Mother)",
+            "Abebe Kebede (Father)",
+            "Grandfather (Kebede Abebe)"
+          ]
+        }
+      }
+    },
+    {
+      "id": 5,
+      "name": "Hana Mohammed",
+      "photo": "/assets/age2/10.jpg",
+      "age_group": "Bright Stars",
+      "basic_info": {
+        "emergency_contact": {
+          "name": "Mohammed Ahmed",
+          "relation": "Father",
+          "phone": "+251 95 567 8901"
+        },
+        "allergies": ["None"],
+        "medical_notes": "Wears glasses"
+      },
+      "detailed_info": {
+        "emergency_contacts": {
+          "primary": {
+            "name": "Mohammed Ahmed",
+            "relation": "Father",
+            "primary_phone": "+251 95 567 8901",
+            "secondary_phone": "+251 95 543 2109",
+            "email": "mohammed.a@example.com",
+            "address": "654 Bole, Addis Ababa"
+          },
+          "secondary": {
+            "name": "Amina Mohammed",
+            "relation": "Mother",
+            "primary_phone": "+251 96 678 9012",
+            "secondary_phone": null,
+            "email": "amina.m@example.com",
+            "address": "654 Bole, Addis Ababa"
+          }
+        },
+        "medical_information": {
+          "allergies": ["None"],
+          "medications": ["None"],
+          "conditions": ["Myopia"],
+          "doctor": {
+            "name": "Dr. Samuel Teshome",
+            "phone": "+251 11 789 0123",
+            "insurance": "Lion Insurance #56789012"
+          },
+          "last_updated": "2025-04-05"
+        },
+        "authorizations": {
+          "hospital_transport": true,
+          "emergency_treatment": true,
+          "authorized_pickup": [
+            "Mohammed Ahmed (Father)",
+            "Amina Mohammed (Mother)",
+            "Aunt (Khadija Mohammed)"
+          ]
+        }
+      }
+    },
+    {
+      "id": 6,
+      "name": "Dawit Kebede",
+      "photo": "/assets/age3/11.jpg",
+      "age_group": "Young Explorers",
+      "basic_info": {
+        "emergency_contact": {
+          "name": "Alem Kebede",
+          "relation": "Mother",
+          "phone": "+251 96 678 9012"
+        },
+        "allergies": ["Gluten"],
+        "medical_notes": "Celiac disease"
+      },
+      "detailed_info": {
+        "emergency_contacts": {
+          "primary": {
+            "name": "Alem Kebede",
+            "relation": "Mother",
+            "primary_phone": "+251 96 678 9012",
+            "secondary_phone": "+251 96 432 1098",
+            "email": "alem.k@example.com",
+            "address": "987 Kazanchis, Addis Ababa"
+          },
+          "secondary": {
+            "name": "Kebede Hailu",
+            "relation": "Father",
+            "primary_phone": "+251 97 789 0123",
+            "secondary_phone": null,
+            "email": "kebede.h@example.com",
+            "address": "987 Kazanchis, Addis Ababa"
+          }
+        },
+        "medical_information": {
+          "allergies": ["Gluten"],
+          "medications": ["None"],
+          "conditions": ["Celiac disease"],
+          "doctor": {
+            "name": "Dr. Rahel Assefa",
+            "phone": "+251 11 890 1234",
+            "insurance": "United Insurance #67890123"
+          },
+          "last_updated": "2025-04-18"
+        },
+        "authorizations": {
+          "hospital_transport": true,
+          "emergency_treatment": true,
+          "authorized_pickup": [
+            "Alem Kebede (Mother)",
+            "Kebede Hailu (Father)",
+            "Grandmother (Worknesh Kebede)"
+          ]
+        }
+      }
+    },
+    {
+      "id": 7,
+      "name": "Rahel Asnake",
+      "photo": "/assets/age3/12.jpg",
+      "age_group": "Little Angels",
+      "basic_info": {
+        "emergency_contact": {
+          "name": "Asnake Demissie",
+          "relation": "Father",
+          "phone": "+251 97 789 0123"
+        },
+        "allergies": ["None"],
+        "medical_notes": "None"
+      },
+      "detailed_info": {
+        "emergency_contacts": {
+          "primary": {
+            "name": "Asnake Demissie",
+            "relation": "Father",
+            "primary_phone": "+251 97 789 0123",
+            "secondary_phone": "+251 97 321 0987",
+            "email": "asnake.d@example.com",
+            "address": "159 Piassa, Addis Ababa"
+          },
+          "secondary": {
+            "name": "Eleni Asnake",
+            "relation": "Mother",
+            "primary_phone": "+251 98 890 1234",
+            "secondary_phone": null,
+            "email": "eleni.a@example.com",
+            "address": "159 Piassa, Addis Ababa"
+          }
+        },
+        "medical_information": {
+          "allergies": ["None"],
+          "medications": ["None"],
+          "conditions": ["None"],
+          "doctor": {
+            "name": "Dr. Michael Solomon",
+            "phone": "+251 11 901 2345",
+            "insurance": "Oromia Insurance #78901234"
+          },
+          "last_updated": "2025-04-20"
+        },
+        "authorizations": {
+          "hospital_transport": true,
+          "emergency_treatment": true,
+          "authorized_pickup": [
+            "Asnake Demissie (Father)",
+            "Eleni Asnake (Mother)",
+            "Aunt (Marta Asnake)"
+          ]
+        }
+      }
+    },
+    {
+      "id": 8,
+      "name": "Nahom Tadesse",
+      "photo": "/assets/age3/13.jpg",
+      "age_group": "Faith Champions",
+      "basic_info": {
+        "emergency_contact": {
+          "name": "Eyerus Tadesse",
+          "relation": "Mother",
+          "phone": "+251 98 890 1234"
+        },
+        "allergies": ["None"],
+        "medical_notes": "ADHD"
+      },
+      "detailed_info": {
+        "emergency_contacts": {
+          "primary": {
+            "name": "Eyerus Tadesse",
+            "relation": "Mother",
+            "primary_phone": "+251 98 890 1234",
+            "secondary_phone": "+251 98 210 9876",
+            "email": "eyerus.t@example.com",
+            "address": "753 Sidist Kilo, Addis Ababa"
+          },
+          "secondary": {
+            "name": "Tadesse Mekonnen",
+            "relation": "Father",
+            "primary_phone": "+251 99 901 2345",
+            "secondary_phone": null,
+            "email": "tadesse.m@example.com",
+            "address": "753 Sidist Kilo, Addis Ababa"
+          }
+        },
+        "medical_information": {
+          "allergies": ["None"],
+          "medications": ["Methylphenidate"],
+          "conditions": ["ADHD"],
+          "doctor": {
+            "name": "Dr. Sofia Girma",
+            "phone": "+251 11 012 3456",
+            "insurance": "Abay Insurance #89012345"
+          },
+          "last_updated": "2025-04-22"
+        },
+        "authorizations": {
+          "hospital_transport": true,
+          "emergency_treatment": true,
+          "authorized_pickup": [
+            "Eyerus Tadesse (Mother)",
+            "Tadesse Mekonnen (Father)",
+            "Grandmother (Tsehay Tadesse)"
+          ]
+        }
+      }
+    },
+    {
+      "id": 9,
+      "name": "Meron Getachew",
+      "photo": "/assets/age3/14.jpg",
+      "age_group": "Bright Stars",
+      "basic_info": {
+        "emergency_contact": {
+          "name": "Getachew Solomon",
+          "relation": "Father",
+          "phone": "+251 99 901 2345"
+        },
+        "allergies": ["Eggs"],
+        "medical_notes": "Food allergies"
+      },
+      "detailed_info": {
+        "emergency_contacts": {
+          "primary": {
+            "name": "Getachew Solomon",
+            "relation": "Father",
+            "primary_phone": "+251 99 901 2345",
+            "secondary_phone": "+251 99 109 8765",
+            "email": "getachew.s@example.com",
+            "address": "852 Megenagna, Addis Ababa"
+          },
+          "secondary": {
+            "name": "Marta Getachew",
+            "relation": "Mother",
+            "primary_phone": "+251 90 012 3456",
+            "secondary_phone": null,
+            "email": "marta.g@example.com",
+            "address": "852 Megenagna, Addis Ababa"
+          }
+        },
+        "medical_information": {
+          "allergies": ["Eggs"],
+          "medications": ["Antihistamines"],
+          "conditions": ["Food allergies"],
+          "doctor": {
+            "name": "Dr. Daniel Assefa",
+            "phone": "+251 11 123 4567",
+            "insurance": "Zemen Insurance #90123456"
+          },
+          "last_updated": "2025-04-25"
+        },
+        "authorizations": {
+          "hospital_transport": true,
+          "emergency_treatment": true,
+          "authorized_pickup": [
+            "Getachew Solomon (Father)",
+            "Marta Getachew (Mother)",
+            "Uncle (Solomon Getachew)"
+          ]
+        }
+      }
+    },
+    {
+      "id": 10,
+      "name": "Kaleb Yohannes",
+      "photo": "/assets/age3/15.jpg",
+      "age_group": "Kingdom Leaders",
+      "basic_info": {
+        "emergency_contact": {
+          "name": "Sara Yohannes",
+          "relation": "Mother",
+          "phone": "+251 90 012 3456"
+        },
+        "allergies": ["Pollen"],
+        "medical_notes": "Seasonal allergies"
+      },
+      "detailed_info": {
+        "emergency_contacts": {
+          "primary": {
+            "name": "Sara Yohannes",
+            "relation": "Mother",
+            "primary_phone": "+251 90 012 3456",
+            "secondary_phone": "+251 90 098 7654",
+            "email": "sara.y@example.com",
+            "address": "963 CMC, Addis Ababa"
+          },
+          "secondary": {
+            "name": "Yohannes Lemma",
+            "relation": "Father",
+            "primary_phone": "+251 91 123 4567",
+            "secondary_phone": null,
+            "email": "yohannes.l@example.com",
+            "address": "963 CMC, Addis Ababa"
+          }
+        },
+        "medical_information": {
+          "allergies": ["Pollen"],
+          "medications": ["Antihistamines"],
+          "conditions": ["Seasonal allergies"],
+          "doctor": {
+            "name": "Dr. Eden Tesfaye",
+            "phone": "+251 11 234 5678",
+            "insurance": "Hibret Insurance #01234567"
+          },
+          "last_updated": "2025-04-28"
+        },
+        "authorizations": {
+          "hospital_transport": true,
+          "emergency_treatment": true,
+          "authorized_pickup": [
+            "Sara Yohannes (Mother)",
+            "Yohannes Lemma (Father)",
+            "Grandfather (Lemma Yohannes)"
+          ]
+        }
+      }
+    }
+  ]
