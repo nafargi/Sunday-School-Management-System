@@ -539,21 +539,21 @@ const data = [
         </table>
       </div>
       {/* History Modal */}
-      <Dialog open={historyModalOpen} onClose={() => setHistoryModalOpen(false)} className="fixed z-10 inset-0 overflow-y-auto">
+      <Dialog open={historyModalOpen} onClose={() => setHistoryModalOpen(false)} className="fixed z-10 inset-0 overflow-y-auto bg-[#7c3bed0f]">
         <div className="flex items-center justify-center min-h-screen p-4">
           <Dialog.Panel className="bg-white rounded-xl p-6 max-w-xl w-full shadow-lg">
-            <Dialog.Title className="text-lg font-semibold mb-2">
+            <Dialog.Title className="text-lg mb-2">
               Permission History - {selectedChild?.name}
             </Dialog.Title>
             <p className="text-sm text-gray-500 mb-4">View the complete permission history for this child</p>
             <table className="w-full text-sm">
               <thead>
                 <tr className="text-gray-500 border-b">
-                  <th className="p-2 text-left">Date</th>
-                  <th className="p-2 text-left">Permission</th>
-                  <th className="p-2 text-left">Action</th>
-                  <th className="p-2 text-left">Requested By</th>
-                  <th className="p-2 text-left">Approved By</th>
+                  <th className="p-2 font-normal text-left">Date</th>
+                  <th className="p-2 font-normal text-left">Permission</th>
+                  <th className="p-2 font-normal text-left">Action</th>
+                  <th className="p-2 font-normal text-left">Requested By</th>
+                  <th className="p-2 font-normal text-left">Approved By</th>
                 </tr>
               </thead>
               <tbody>
