@@ -138,8 +138,6 @@ We welcome believers who want to use their technical gifts for ministry! Whether
 * A designer (UI/UX improvements)
 * A Sunday School teacher (feature suggestions)
 
-Please read our [Contribution Guidelines](CONTRIBUTING.md) and join us in serving the next generation of believers.
-
 > *"Whatever you do, work heartily, as for the Lord."* — Colossians 3:23
 
 ---
