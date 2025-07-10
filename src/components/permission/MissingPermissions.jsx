@@ -6,12 +6,12 @@ const ChildrenTable = () => {
 const [children, setChildren] = useState([]);
 const [filter, setFilter] = useState('all');
   
-const ageGroupColors = {
-  "Little Lights": "bg-yellow-100 border-yellow-200 text-yellow-800",
-  "Bright Stars": "bg-blue-100 border-blue-500 text-blue-800",
-  "Young Explorers": "bg-green-100 border-green-500 text-green-800",
-  "Faith Champions": "bg-purple-100 border-purple-500 text-purple-800",
-  "Kingdom Leaders": "bg-red-100 border-red-200 text-red-800",
+  const ageGroupColors = {
+    "Little Lights": "bg-yellow-100 border border-yellow-600 text-yellow-600",
+    "Bright Stars": "bg-pink-100 border border-pink-600 text-pink-600",
+    "Young Explorers": "bg-cyan-100 border border-cyan-600 text-cyan-600",
+    "Faith Champions": "bg-green-100 border border-green-600 text-green-600",
+    "Kingdom Leaders": "bg-purple-100 border border-purple-600 text-purple-600",
 };
 
 useEffect(() => {
