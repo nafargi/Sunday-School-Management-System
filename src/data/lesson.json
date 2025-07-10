@@ -7,7 +7,7 @@
       "time": "9:30 AM (45 min)",
       "location": "Main Hall",
       "age_group": "Little Lights",
-      "status": "Upcoming",
+      "status": "Completed",
       "actions": "View Details",
       "detail_view": {
         "overview": {
@@ -83,7 +83,7 @@
       "time": "2:00 PM (50 min)",
       "location": "Chapel",
       "age_group": "Kingdom Leaders",
-      "status": "Upcoming",
+      "status": "Completed",
       "actions": "View Details",
       "detail_view": {
         "overview": {
@@ -235,7 +235,7 @@
       "time": "9:00 AM (45 min)",
       "location": "Classroom 1",
       "age_group": "Little Lights",
-      "status": "Upcoming",
+      "status": "Completed",
       "actions": "View Details",
       "detail_view": {
         "overview": {
@@ -311,7 +311,7 @@
       "time": "11:00 AM (45 min)",
       "location": "Sanctuary",
       "age_group": "Kingdom Leaders",
-      "status": "Planning",
+      "status": "Upcoming",
       "actions": "View Details",
       "detail_view": {
         "overview": {
