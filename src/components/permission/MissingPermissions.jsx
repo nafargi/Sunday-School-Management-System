@@ -7,11 +7,11 @@ const [children, setChildren] = useState([]);
 const [filter, setFilter] = useState('all');
   
 const ageGroupColors = {
-  "Little Lights": "bg-yellow-100",
-  "Bright Stars": "bg-blue-100",
-  "Young Explorers": "bg-green-100",
-  "Faith Champions": "bg-purple-100",
-  "Kingdom Leaders": "bg-red-100",
+  "Little Lights": "bg-yellow-100 border-yellow-200 text-yellow-800",
+  "Bright Stars": "bg-blue-100 border-blue-500 text-blue-800",
+  "Young Explorers": "bg-green-100 border-green-500 text-green-800",
+  "Faith Champions": "bg-purple-100 border-purple-500 text-purple-800",
+  "Kingdom Leaders": "bg-red-100 border-red-200 text-red-800",
 };
 
 useEffect(() => {
@@ -35,13 +35,13 @@ useEffect(() => {
 
   return (
     <div className="container mx-auto p-4 bg-white  mt-6 rounded-lg ">
-      <h1 className="text-2xl  mb-6">Ethiopian Children Management</h1>
+      <h1 className="text-2xl  mb-6">Missing Permissions</h1>
       
       <div className="mb-4">
-        <label className="mr-2">Filter by missing permission:</label>
+        <label className="mr-2 font-normal text-gray-700">Filter :</label>
         <select 
           onChange={(e) => setFilter(e.target.value)}
-          className="p-2  rounded"
+          className="p-2  rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-purple-500"
         >
           <option value="all">All Children</option>
           <option value="social_media">Social Media</option>
@@ -71,14 +71,17 @@ useEffect(() => {
                 className='rounded-full w-10 h-10' /></td>
               <td className="py-2 px-4 text-sm  border-b border-gray-200">{child.name}</td>
               <td className="py-2 px-4 text-sm   border-b border-gray-200">{child.age}</td>
-                <td
-                className={`py-2 px-4 text-sm border-b border-gray-200 ${
+                <td className='border-b border-gray-200 px-4'>
+                    <p   className={`py-1 px-2 text-sm  rounded-full inline-block ${
                     ageGroupColors[child.age_group] || ""
-                }`}
-                >
-                {child.age_group}
-                </td>              <td className="py-2 px-4  text-sm  border-b border-gray-200">
-                {getMissingPermissions(child).join(', ') || 'None'}
+                    }`}>{child.age_group}</p>
+                
+                </td>
+                 <td className="py-2 px-4  text-sm  border-b border-gray-200">
+                    <p className="bg-red-100 text-red-500 inline-block border border-red-500 px-2 py-1 rounded-full text-xs">
+                        {getMissingPermissions(child) || 'None'}
+                    </p>
+                
               </td>
               <td className="py-2 px-4  border-b border-gray-200">
                 <button 
