@@ -1,13 +1,87 @@
-import React from 'react'
-import { useState } from 'react'
-import { useNavigate } from 'react-router-dom';
+import React, { useState } from "react";
+import { Dialog } from "@headlessui/react";
 
-import ListInfo from './ListInfo'
+// Import all images for age1 (Little Lights)
+import child1 from '../../assets/age1/1.jpg';
+import child2 from '../../assets/age1/2.jpg';
+import child3 from '../../assets/age1/3.jpg';
+import child4 from '../../assets/age1/4.jpg';
+import child5 from '../../assets/age1/5.jpg';
+import child26 from '../../assets/age1/26.jpg';
 
-function AllChildren() {
-const navigate = useNavigate();
+// Import all images for age2 (Bright Stars)
+import child6 from '../../assets/age2/6.jpg';
+import child7 from '../../assets/age2/7.jpg';
+import child8 from '../../assets/age2/8.jpg';
+import child9 from '../../assets/age2/9.jpg';
+import child10 from '../../assets/age2/10.jpg';
+import child27 from '../../assets/age2/27.jpg';
 
-const childrenData = [
+// Import all images for age3 (Young Explorers)
+import child11 from '../../assets/age3/11.jpg';
+import child12 from '../../assets/age3/12.jpg';
+import child13 from '../../assets/age3/13.jpg';
+import child14 from '../../assets/age3/14.jpg';
+import child15 from '../../assets/age3/15.jpg';
+import child28 from '../../assets/age3/28.jpg';
+
+// Import all images for age4 (Faith Champions)
+import child16 from '../../assets/age4/16.jpg';
+import child17 from '../../assets/age4/17.jpg';
+import child18 from '../../assets/age4/18.jpg';
+import child19 from '../../assets/age4/19.jpg';
+import child20 from '../../assets/age4/20.jpg';
+import child29 from '../../assets/age4/29.jpg';
+
+// Import all images for age5 (Kingdom Leaders)
+import child21 from '../../assets/age5/21.jpg';
+import child22 from '../../assets/age5/22.jpg';
+import child23 from '../../assets/age5/23.jpg';
+import child24 from '../../assets/age5/24.jpg';
+import child25 from '../../assets/age5/25.jpg';
+import child30 from '../../assets/age5/30.jpg';
+
+// Create the image mapping object
+const imageMap = {
+  'age1/1': child1,
+  'age1/2': child2,
+  'age1/3': child3,
+  'age1/4': child4,
+  'age1/5': child5,
+  'age1/26': child26,
+  
+  'age2/6': child6,
+  'age2/7': child7,
+  'age2/8': child8,
+  'age2/9': child9,
+  'age2/10': child10,
+  'age2/27': child27,
+  
+  'age3/11': child11,
+  'age3/12': child12,
+  'age3/13': child13,
+  'age3/14': child14,
+  'age3/15': child15,
+  'age3/28': child28,
+  
+  'age4/16': child16,
+  'age4/17': child17,
+  'age4/18': child18,
+  'age4/19': child19,
+  'age4/20': child20,
+  'age4/29': child29,
+  
+  'age5/21': child21,
+  'age5/22': child22,
+  'age5/23': child23,
+  'age5/24': child24,
+  'age5/25': child25,
+  'age5/30': child30
+};
+
+const AllChildren = () => {
+    
+const data = [
   {
     id: 1,
     photo: "1",
@@ -309,55 +383,56 @@ const childrenData = [
     emergencyContact: "0299001122 (Father)"
   }
 ];
-   const [children, setChildren] = useState(childrenData);
+  const [children, setChildren] = useState(
+    data.map((child) => ({
+      ...child,
+      permissions: {
+        photos: true,
+        outings: true,
+        snacks: true,
+        socialMedia: false,
+      },
+    }))
+  );
+  const [selectedChild, setSelectedChild] = useState(null);
+  const [historyModalOpen, setHistoryModalOpen] = useState(false);
 
-// State for filters
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedAgeGroup, setSelectedAgeGroup] = useState('All');
-  const [selectedAttendance, setSelectedAttendance] = useState('All');
-
-  // Filter children data based on search and filters
-    const filteredChildren = children.filter(child =>{
-    const matchesSearch = child.name.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesAgeGroup = selectedAgeGroup === 'All' || child.ageGroup === selectedAgeGroup;
-    const matchesAttendance = selectedAttendance === 'All' || child.attendance === selectedAttendance;
-    return matchesSearch && matchesAgeGroup && matchesAttendance;
-  });
-
-  // Get unique age groups for filter dropdown
-  const attendanceOptions = ['All', 'Present', 'Absent'];
-  
-
-  const toggleAttendance = (id) => {
-    const updated = children.map(child =>
-      child.id === id
-        ? { ...child, attendance: child.attendance === "Present" ? "Absent" : "Present" }
-        : child
+  const togglePermission = (id, type) => {
+    setChildren((prev) =>
+      prev.map((child) =>
+        child.id === id
+          ? {
+              ...child,
+              permissions: {
+                ...child.permissions,
+                [type]: !child.permissions[type],
+              },
+            }
+          : child
+      )
     );
-    setChildren(updated);
   };
 
-  const presentCount = children.filter(c => c.attendance === "Present").length;
-  const absentCount = children.length - presentCount;
-  const rate = Math.round((presentCount / children.length) * 100);
+  // State for filters
+    const [searchTerm, setSearchTerm] = useState('');
+    const [selectedAgeGroup, setSelectedAgeGroup] = useState('All');
+    const [selectedAttendance, setSelectedAttendance] = useState('All');
+  
+    // Filter children data based on search and filters
+      const filteredChildren = children.filter(child =>{
+      const matchesSearch = child.name.toLowerCase().includes(searchTerm.toLowerCase());
+      const matchesAgeGroup = selectedAgeGroup === 'All' || child.ageGroup === selectedAgeGroup;
+      const matchesAttendance = selectedAttendance === 'All' || child.attendance === selectedAttendance;
+      return matchesSearch && matchesAgeGroup && matchesAttendance;
+    });
+    const attendanceOptions = ['All Permissions', 'Photo', 'Snack','Social Media','Outing'];
+
 
   return (
-  <div className="mt-6 flex flex-col space-y-4">
-    
+    <div className="p-6 bg-white rounded-xl mt-6 ">
+      <h2 className="text-2xl  ">Child Permissions</h2>
 
-     <div className="bg-white p-6 rounded-2xl shadow-xl shadow-[#00000009] ">
-              <div className="flex  items-center justify-between">
-                <div className="">
-                        <h2 className="text-2xl">Child Permissions</h2>
-                </div>
-                  <button className="border border-gray-200 bg-white text-gray-800 px-4 py-2 rounded-lg hover:bg-gray-50 transition-colors flex items-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-download mr-2 h-4 w-4"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" x2="12" y1="15" y2="3"></line></svg>
-                    Export Report
-                  </button>
-              </div>
-            
-              
-              {/* Search and Filter Bar */}
+        {/* Search and Filter Bar */}
               <div className="grid  grid-cols-1 md:grid-cols-12 gap-4 mb-2">
                 {/* Search Input - Full width on mobile, 6 cols on desktop */}
                 <div className='md:col-span-10'>
@@ -393,37 +468,149 @@ const childrenData = [
                   </select>
                 </div>
               </div>
-
-              {/* Table Header - Hidden on mobile */}
-              <div className="grid grid-cols-12 gap-2 p-3 mb-0 rounded-t-lg border text-gray-500 border-gray-200 text-sm">
-                <div className="col-span-0">#</div>
-                <div className="col-span-2 ">Photo</div>
-                <div className="col-span-4 ">Name</div>
-                <div className="col-span-3  ">Age Group</div>
-                <div className="col-span-2 ">Status</div>
-              </div>
+      <div className="overflow-x-auto border border-gray-200 rounded-lg">
+        <table className="min-w-full   ">
+          <thead className="">
+             <tr className="bg-gray-50 text-left  text-sm text-gray-900 ">
+              <th className="p-3 font-normal">Photo</th>
+              <th className="p-3 font-normal">Child</th>
+              <th className="p-3 font-normal">Age Group</th>
+              <th className="p-3 font-normal">Photos</th>
+              <th className="p-3 font-normal">Outings</th>
+              <th className="p-3 font-normal">Snacks</th>
+              <th className="p-3 font-normal">Social Media</th>
+              <th className="p-3 font-normal">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+             {children.map((child) => {
+              const imageKey = `${child.folder}/${child.photo}`;
+              const imageSrc = imageMap[imageKey];
               
-              {/* Children List */}
-              <div className="divide-y divide-gray-200">
-                {filteredChildren.length > 0 ? (
-                  filteredChildren.map((child) => (
-                    <ListInfo
-                      key={child.id}
-                      {...child}
-                      onToggleAttendance={() => toggleAttendance(child.id)}
+              return (
+                <tr key={child.id} className="border-t border-gray-200 text-sm">
+                  <td className="p-3">
+                    {imageSrc ? (
+                      <img 
+                        src={imageSrc} 
+                        alt={`${child.name}'s profile`}
+                        className='w-10 h-10 rounded-full object-cover border border-gray-200'  
+                      />
+                    ) : (
+                      <div className="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center border border-gray-300">
+                        <span className="text-xs text-gray-500">No photo</span>
+                      </div>
+                    )}
+                  </td>
+                  <td className="p-3  text-gray-900">{child.name}</td>
+                  <td className="p-3">
+                    <span className="text-xs px-2 py-1 rounded-full bg-gray-100">
+                      {child.ageGroup}
+                    </span>
+                  </td>
+                  {["photos", "outings", "snacks", "socialMedia"].map((perm) => (
+                    <td className="p-3" key={perm}>
+                      <label className="relative inline-flex items-center cursor-pointer">
+                        <input
+                          type="checkbox"
+                          className="sr-only peer"
+                          checked={child.permissions[perm]}
+                          onChange={() => togglePermission(child.id, perm)}
+                        />
+                        <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-purple-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-purple-600"></div>
+                      </label>
+                    </td>
+                  ))}
+                  <td className="p-3">
+                    <button
+                      className="px-3 py-1 text-sm rounded-md border border-gray-300 hover:bg-gray-50"
+                      onClick={() => {
+                        setSelectedChild(child);
+                        setHistoryModalOpen(true);
+                      }}
+                    >
+                      History
+                    </button>
+                  </td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
+      {/* History Modal */}
+      <Dialog open={historyModalOpen} onClose={() => setHistoryModalOpen(false)} className="fixed z-10 inset-0 overflow-y-auto bg-[#7c3bed0f]">
+        <div className="flex items-center justify-center min-h-screen p-4">
+          <Dialog.Panel className="bg-white rounded-xl p-6 max-w-xl w-full shadow-lg">
+            <Dialog.Title className="text-lg mb-2">
+              Permission History - {selectedChild?.name}
+            </Dialog.Title>
+            <p className="text-sm text-gray-500 mb-4">View the complete permission history for this child</p>
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="text-gray-500 border-b">
+                  <th className="p-2 font-normal text-left">Date</th>
+                  <th className="p-2 font-normal text-left">Permission</th>
+                  <th className="p-2 font-normal text-left">Action</th>
+                  <th className="p-2 font-normal text-left">Requested By</th>
+                  <th className="p-2 font-normal text-left">Approved By</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td className="p-2">2025-05-15</td>
+                  <td className="p-2">Photos</td>
+                  <td className="p-2">
+                    <span className="bg-purple-500 text-white px-2 py-1 rounded-full text-xs">Granted</span>
+                  </td>
+                  <td className="p-2">Esayas Alemeu (Parent)</td>
+                  <td className="p-2">Epherem Woldeab (Admin)</td>
+                </tr>
+                <tr>
+                  <td className="p-2">2025-05-10</td>
+                  <td className="p-2">Outings</td>
+                  <td className="p-2">
+                    <span className="bg-purple-500 text-white px-2 py-1 rounded-full text-xs">Granted</span>
+                  </td>
+                  <td className="p-2">Abreham Molla(Parent)</td>
+                  <td className="p-2">Bethel Baynesagn (Admin)</td>
+                </tr>
+                <tr>
+                  <td className="p-2">2025-04-22</td>
+                  <td className="p-2">Social Media</td>
+                  <td className="p-2">
+                    <span className="bg-gray-300 text-black px-2 py-1 rounded-full text-xs">Denied</span>
+                  </td>
+                  <td className="p-2">Tameru Abere (Parent)</td>
+                  <td className="p-2">Hewan Muluneh (Director)</td>
+                </tr>
+                <tr>
+                  <td className="p-2">2025-03-15</td>
+                  <td className="p-2">Snacks</td>
+                  <td className="p-2">
+                    <span className="bg-purple-500 text-white px-2 py-1 rounded-full text-xs">Granted</span>
+                  </td>
+                  <td className="p-2">Initial Registration</td>
+                  <td className="p-2">System</td>
+                </tr>
+              </tbody>
+            </table>
+            <div className="flex justify-end gap-2 mt-6">
+              <button
+                onClick={() => setHistoryModalOpen(false)}
+                className="px-4 py-2 rounded-md border border-gray-300 hover:bg-gray-50"
+              >
+                Close
+              </button>
+              <button className="px-4 py-2 rounded-md bg-purple-600 text-white hover:bg-purple-700">
+                Print History
+              </button>
+            </div>
+          </Dialog.Panel>
+        </div>
+      </Dialog>
+    </div>
+  );
+};
 
-                    />
-                  ))
-                ) : (
-                  <div className="p-4 text-center text-gray-500">
-                    No children match your search criteria
-                  </div>
-                )}
-              </div>
-     </div>
-
-  </div>
-  )
-}
-
-export default AllChildren
+export default AllChildren;

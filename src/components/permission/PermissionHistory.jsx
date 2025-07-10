@@ -563,8 +563,8 @@ const data = [
                   <td className="p-2">
                     <span className="bg-purple-500 text-white px-2 py-1 rounded-full text-xs">Granted</span>
                   </td>
-                  <td className="p-2">Jane Doe (Parent)</td>
-                  <td className="p-2">Sarah Wilson (Admin)</td>
+                  <td className="p-2">Esayas Alemeu (Parent)</td>
+                  <td className="p-2">Epherem Woldeab (Admin)</td>
                 </tr>
                 <tr>
                   <td className="p-2">2025-05-10</td>
@@ -572,8 +572,8 @@ const data = [
                   <td className="p-2">
                     <span className="bg-purple-500 text-white px-2 py-1 rounded-full text-xs">Granted</span>
                   </td>
-                  <td className="p-2">Jane Doe (Parent)</td>
-                  <td className="p-2">Sarah Wilson (Admin)</td>
+                  <td className="p-2">Abreham Molla(Parent)</td>
+                  <td className="p-2">Bethel Baynesagn (Admin)</td>
                 </tr>
                 <tr>
                   <td className="p-2">2025-04-22</td>
@@ -581,8 +581,8 @@ const data = [
                   <td className="p-2">
                     <span className="bg-gray-300 text-black px-2 py-1 rounded-full text-xs">Denied</span>
                   </td>
-                  <td className="p-2">Jane Doe (Parent)</td>
-                  <td className="p-2">Robert Johnson (Director)</td>
+                  <td className="p-2">Tameru Abere (Parent)</td>
+                  <td className="p-2">Hewan Muluneh (Director)</td>
                 </tr>
                 <tr>
                   <td className="p-2">2025-03-15</td>

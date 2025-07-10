@@ -1,0 +1,310 @@
+ [
+    {
+      "id": 1,
+      "name": "Yordanos Tesfaye",
+      "age": 4,
+      "gender": "Female",
+      "age_group": "Little Angels",
+      "photo": "/assets/age1/1.jpg",
+      "allergies": ["Peanuts"],
+      "medications": "None",
+      "attendance": [
+        {
+          "date": "2024-06-01",
+          "check_in": "08:30 AM",
+          "check_out": "03:00 PM",
+          "status": "Present"
+        }
+      ],
+      "permissions": {
+        "social_media": false,
+        "photos": true,
+        "outings": false,
+        "snacks": true
+      },
+      "emergency_contacts": [
+        {
+          "name": "Mekdes Tesfaye (Mother)",
+          "phone": "+251911234567",
+          "relationship": "Parent"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Eyob Assefa",
+      "age": 5,
+      "gender": "Male",
+      "age_group": "Bright Stars",
+      "photo": "/assets/age1/1.jpg",
+      "allergies": ["None"],
+      "medications": "Asthma inhaler",
+      "attendance": [
+        {
+          "date": "2024-06-01",
+          "check_in": "09:00 AM",
+          "check_out": "03:15 PM",
+          "status": "Present"
+        }
+      ],
+      "permissions": {
+        "social_media": true,
+        "photos": true,
+        "outings": true,
+        "snacks": false
+      },
+      "emergency_contacts": [
+        {
+          "name": "Tigist Assefa (Mother)",
+          "phone": "+251922345678",
+          "relationship": "Parent"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Selamawit Girma",
+      "age": 6,
+      "gender": "Female",
+      "age_group": "Sunshine Kids",
+      "photo": "/assets/age1/1.jpg",
+      "allergies": ["Dairy"],
+      "medications": "None",
+      "attendance": [
+        {
+          "date": "2024-06-01",
+          "status": "Absent",
+          "reason": "Sick"
+        }
+      ],
+      "permissions": {
+        "social_media": false,
+        "photos": false,
+        "outings": true,
+        "snacks": true
+      },
+      "emergency_contacts": [
+        {
+          "name": "Girma Wolde (Father)",
+          "phone": "+251933456789",
+          "relationship": "Parent"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Mikias Abebe",
+      "age": 3,
+      "gender": "Male",
+      "age_group": "Tiny Tots",
+      "photo": "/assets/age1/1.jpg",
+      "allergies": ["Eggs"],
+      "medications": "EpiPen",
+      "attendance": [
+        {
+          "date": "2024-06-01",
+          "check_in": "08:45 AM",
+          "check_out": "03:30 PM",
+          "status": "Present"
+        }
+      ],
+      "permissions": {
+        "social_media": false,
+        "photos": true,
+        "outings": false,
+        "snacks": false
+      },
+      "emergency_contacts": [
+        {
+          "name": "Frehiwot Abebe (Mother)",
+          "phone": "+251944567890",
+          "relationship": "Parent"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Hana Mohammed",
+      "age": 5,
+      "gender": "Female",
+      "age_group": "Little Angels",
+      "photo": "/assets/age1/1.jpg",
+      "allergies": ["None"],
+      "medications": "None",
+      "attendance": [
+        {
+          "date": "2024-06-01",
+          "check_in": "08:30 AM",
+          "check_out": "03:00 PM",
+          "status": "Present"
+        }
+      ],
+      "permissions": {
+        "social_media": true,
+        "photos": true,
+        "outings": true,
+        "snacks": true
+      },
+      "emergency_contacts": [
+        {
+          "name": "Mohammed Ahmed (Father)",
+          "phone": "+251955678901",
+          "relationship": "Parent"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Dawit Kebede",
+      "age": 4,
+      "gender": "Male",
+      "age_group": "Bright Stars",
+      "photo": "/assets/age1/1.jpg",
+      "allergies": ["Pollen"],
+      "medications": "Antihistamines",
+      "attendance": [
+        {
+          "date": "2024-06-01",
+          "status": "Absent",
+          "reason": "Family trip"
+        }
+      ],
+      "permissions": {
+        "social_media": false,
+        "photos": false,
+        "outings": false,
+        "snacks": true
+      },
+      "emergency_contacts": [
+        {
+          "name": "Alem Kebede (Mother)",
+          "phone": "+251966789012",
+          "relationship": "Parent"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Rahel Asnake",
+      "age": 6,
+      "gender": "Female",
+      "age_group": "Sunshine Kids",
+      "photo": "/assets/age1/1.jpg",
+      "allergies": ["None"],
+      "medications": "None",
+      "attendance": [
+        {
+          "date": "2024-06-01",
+          "check_in": "09:15 AM",
+          "check_out": "03:45 PM",
+          "status": "Present"
+        }
+      ],
+      "permissions": {
+        "social_media": true,
+        "photos": true,
+        "outings": true,
+        "snacks": true
+      },
+      "emergency_contacts": [
+        {
+          "name": "Asnake Demissie (Father)",
+          "phone": "+251977890123",
+          "relationship": "Parent"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Nahom Tadesse",
+      "age": 3,
+      "gender": "Male",
+      "age_group": "Tiny Tots",
+      "photo": "/assets/age1/1.jpg",
+      "allergies": ["Shellfish"],
+      "medications": "None",
+      "attendance": [
+        {
+          "date": "2024-06-01",
+          "check_in": "08:30 AM",
+          "check_out": "03:00 PM",
+          "status": "Present"
+        }
+      ],
+      "permissions": {
+        "social_media": false,
+        "photos": false,
+        "outings": true,
+        "snacks": false
+      },
+      "emergency_contacts": [
+        {
+          "name": "Eyerus Tadesse (Mother)",
+          "phone": "+251988901234",
+          "relationship": "Parent"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Meron Getachew",
+      "age": 5,
+      "gender": "Female",
+      "age_group": "Little Angels",
+      "photo": "/assets/age1/1.jpg",
+      "allergies": ["None"],
+      "medications": "None",
+      "attendance": [
+        {
+          "date": "2024-06-01",
+          "check_in": "08:45 AM",
+          "check_out": "03:15 PM",
+          "status": "Present"
+        }
+      ],
+      "permissions": {
+        "social_media": true,
+        "photos": true,
+        "outings": false,
+        "snacks": true
+      },
+      "emergency_contacts": [
+        {
+          "name": "Getachew Solomon (Father)",
+          "phone": "+251999012345",
+          "relationship": "Parent"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Kaleb Yohannes",
+      "age": 4,
+      "gender": "Male",
+      "age_group": "Bright Stars",
+      "photo": "/assets/age1/1.jpg",
+      "allergies": ["Dust"],
+      "medications": "None",
+      "attendance": [
+        {
+          "date": "2024-06-01",
+          "check_in": "09:00 AM",
+          "check_out": "03:30 PM",
+          "status": "Present"
+        }
+      ],
+      "permissions": {
+        "social_media": false,
+        "photos": true,
+        "outings": true,
+        "snacks": false
+      },
+      "emergency_contacts": [
+        {
+          "name": "Sara Yohannes (Mother)",
+          "phone": "+251900123456",
+          "relationship": "Parent"
+        }
+      ]
+    }
+  ]
