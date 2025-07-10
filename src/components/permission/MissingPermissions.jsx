@@ -72,7 +72,7 @@ useEffect(() => {
               <td className="py-2 px-4 text-sm  border-b border-gray-200">{child.name}</td>
               <td className="py-2 px-4 text-sm   border-b border-gray-200">{child.age}</td>
                 <td className='border-b border-gray-200 px-4'>
-                    <p   className={`py-1 px-2 text-sm  rounded-full inline-block ${
+                    <p   className={` px-2 text-sm  rounded-full inline-block ${
                     ageGroupColors[child.age_group] || ""
                     }`}>{child.age_group}</p>
                 
@@ -85,13 +85,13 @@ useEffect(() => {
               </td>
               <td className="py-2 px-4  border-b border-gray-200">
                 <button 
-                  className="bg-blue-200 border border-blue-500 rounded-full text-blue-500  text-sm font-normal px-3 py-1 mr-2"
+                  className="bg-blue-200 border border-blue-500 rounded-full text-blue-500  text-sm font-normal px-3  mr-2"
                   onClick={() => console.log(`Send reminder for ${child.name}`)}
                 >
                   Remind
                 </button>
                 <button 
-                  className="bg-green-200 border border-green-500 text-sm font-normal rounded-full text-green-500 px-3 py-1 "
+                  className="bg-green-200 border border-green-500 text-sm font-normal rounded-full text-green-500 px-3  "
                   onClick={() => console.log(`Print form for ${child.name}`)}
                 >
                   Print
