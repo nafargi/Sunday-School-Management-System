@@ -1,0 +1,103 @@
+[
+    {
+      "id": 1,
+      "title": "Creation (Genesis 1-2)",
+      "type": "Genesis Story",
+      "date": "2025-01-19", 
+      "location": "Main Hall",
+      "status": "Upcoming",
+      "actions": "Open menu",
+      "cultural_note": "Taught during Timket celebrations in Ethiopia"
+    },
+    {
+      "id": 2,
+      "title": "Noah's Ark (Genesis 6-9)",
+      "type": "Flood Narrative",
+      "date": "2025-03-10",
+      "location": "Children's Chapel",
+      "status": "Planning",
+      "actions": "Open menu",
+      "cultural_note": "Rainbow symbolism used in Ethiopian Sunday schools"
+    },
+    {
+      "id": 3,
+      "title": "Abraham's Sacrifice (Genesis 22)",
+      "type": "Patriarch Story",
+      "date": "2025-04-25",
+      "location": "Outdoor Amphitheater",
+      "status": "Upcoming",
+      "actions": "Open menu",
+      "cultural_note": "Connects to Ethiopian Orthodox fasting traditions"
+    },
+    {
+      "id": 4,
+      "title": "Joseph in Egypt (Genesis 37-50)",
+      "type": "Diaspora Story",
+      "date": "2025-06-15",
+      "location": "Classroom 3",
+      "status": "Upcoming",
+      "actions": "Open menu",
+      "cultural_note": "Popular in Eritrean refugee ministry programs"
+    },
+    {
+      "id": 5,
+      "title": "Moses & the Exodus (Exodus 14)",
+      "type": "Liberation Story",
+      "date": "2025-04-27", 
+      "location": "Main Hall",
+      "status": "Completed",
+      "actions": "Open menu",
+      "cultural_note": "Celebrated during Fasika with special hymns"
+    },
+    {
+      "id": 6,
+      "title": "David & Goliath (1 Samuel 17)",
+      "type": "Heroic Narrative",
+      "date": "2025-07-20",
+      "location": "Youth Tent",
+      "status": "Planning",
+      "actions": "Open menu",
+      "cultural_note": "Taught with traditional Ethiopian warrior analogies"
+    },
+    {
+      "id": 7,
+      "title": "The Good Samaritan (Luke 10)",
+      "type": "Parable",
+      "date": "2025-05-30",
+      "location": "Fellowship Hall",
+      "status": "Upcoming",
+      "actions": "Open menu",
+      "cultural_note": "Adapted with Ethiopian regional neighbor examples"
+    },
+    {
+      "id": 8,
+      "title": "Jesus Feeds 5000 (John 6)",
+      "type": "Miracle",
+      "date": "2025-08-12",  
+      "location": "Church Lawn",
+      "status": "Upcoming",
+      "actions": "Open menu",
+      "cultural_note": "Demonstrated with injera bread visuals"
+    },
+    {
+      "id": 9,
+      "title": "The Ethiopian Eunuch (Acts 8)",
+      "type": "New Testament",
+      "date": "2025-09-28", 
+      "location": "Sanctuary",
+      "status": "Planning",
+      "actions": "Open menu",
+      "cultural_note": "Special focus for Eritrean/Ethiopian heritage lessons"
+    },
+    {
+      "id": 10,
+      "title": "Armor of God (Ephesians 6)",
+      "type": "Epistle Lesson",
+      "date": "2025-11-15",
+      "location": "Classroom 1",
+      "status": "Upcoming",
+      "actions": "Open menu",
+      "cultural_note": "Taught with Ethiopian traditional shield artifacts"
+    }
+  ]
+ 
