@@ -3,9 +3,16 @@ import React, { useState, useEffect } from 'react';
 import childrenData from './../../data/childern.json'; // Adjust the path as necessary
 
 const ChildrenTable = () => {
-  const [children, setChildren] = useState([]);
-  const [filter, setFilter] = useState('all');
+const [children, setChildren] = useState([]);
+const [filter, setFilter] = useState('all');
   
+const ageGroupColors = {
+  "Little Lights": "bg-yellow-100",
+  "Bright Stars": "bg-blue-100",
+  "Young Explorers": "bg-green-100",
+  "Faith Champions": "bg-purple-100",
+  "Kingdom Leaders": "bg-red-100",
+};
 
 useEffect(() => {
   if (Array.isArray(childrenData)) {
@@ -46,14 +53,14 @@ useEffect(() => {
 
       <div className="border border-gray-200 rounded-lg  overflow-hidden ">
         <table className="min-w-full bg-white ">
-        <thead className='border border-gray-200 '>
+        <thead className='border border-gray-200  bg-gray-50 text-sm'>
           <tr>
-            <th className="py-2 px-4  ">Photo</th>
-            <th className="py-2 px-4 ">Name</th>
-            <th className="py-2 px-4 ">Age</th>
-            <th className="py-2 px-4 ">Group</th>
-            <th className="py-2 px-4 ">Missing Permissions</th>
-            <th className="py-2 px-4 ">Actions</th>
+            <th className="py-2 px-4 font-normal ">Photo</th>
+            <th className="py-2 px-4 font-normal text-left  ">Name</th>
+            <th className="py-2 px-4 font-normal text-left ">Age</th>
+            <th className="py-2 px-4 font-normal text-left ">Group</th>
+            <th className="py-2 px-4 font-normal text-left ">Missing Permissions</th>
+            <th className="py-2 px-4 font-normal text-left ">Actions</th>
           </tr>
         </thead>
         <tbody>
@@ -62,10 +69,15 @@ useEffect(() => {
               <td className="py-2 px-4 flex justify-center border-b border-gray-200">
                 <img src={child.photo} alt="profile image"
                 className='rounded-full w-10 h-10' /></td>
-              <td className="py-2 px-4  border-b border-gray-200">{child.name}</td>
-              <td className="py-2 px-4  border-b border-gray-200">{child.age}</td>
-              <td className="py-2 px-4  border-b border-gray-200 ">{child.age_group}</td>
-              <td className="py-2 px-4  border-b border-gray-200">
+              <td className="py-2 px-4 text-sm  border-b border-gray-200">{child.name}</td>
+              <td className="py-2 px-4 text-sm   border-b border-gray-200">{child.age}</td>
+                <td
+                className={`py-2 px-4 text-sm border-b border-gray-200 ${
+                    ageGroupColors[child.age_group] || ""
+                }`}
+                >
+                {child.age_group}
+                </td>              <td className="py-2 px-4  text-sm  border-b border-gray-200">
                 {getMissingPermissions(child).join(', ') || 'None'}
               </td>
               <td className="py-2 px-4  border-b border-gray-200">
