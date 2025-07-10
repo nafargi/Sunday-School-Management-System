@@ -1,0 +1,387 @@
+ [
+    {
+      "id": 1,
+      "name": "Yordanos Tesfaye",
+      "age": 4,
+      "birth_date": "2021-03-15",
+      "gender": "Female",
+      "age_group": {
+        "name": "Little Angels",
+        "color": "#FFD700",
+        "range": "3-4 years"
+      },
+      "photo": "/assets/age2/8.jpg",
+      "allergies": ["Peanuts"],
+      "medications": "None",
+      "permissions": {
+        "photos": true,
+        "social_media": false,
+        "outings": true,
+        "snacks": false
+      },
+      "permission_history": [
+        {
+          "date": "2025-05-10",
+          "permission": "photos",
+          "action": "granted",
+          "requested_by": "Mekdes Tesfaye (Mother)",
+          "approved_by": "Sarah Wilson (Admin)"
+        },
+        {
+          "date": "2025-05-12",
+          "permission": "social_media",
+          "action": "denied",
+          "requested_by": "Mekdes Tesfaye (Mother)",
+          "approved_by": "Robert Johnson (Director)"
+        }
+      ],
+      "attendance": [
+        {
+          "date": "2025-06-01",
+          "check_in": "08:30 AM",
+          "check_out": "03:00 PM",
+          "status": "Present"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Eyob Assefa",
+      "age": 5,
+      "birth_date": "2020-07-22",
+      "gender": "Male",
+      "age_group": {
+        "name": "Bright Stars",
+        "color": "#4169E1",
+        "range": "5-6 years"
+      },
+      "photo": "/assets/age2/6.jpg",
+      "allergies": ["None"],
+      "medications": "Asthma inhaler",
+      "permissions": {
+        "photos": true,
+        "social_media": false,
+        "outings": false,
+        "snacks": true
+      },
+      "permission_history": [
+        {
+          "date": "2025-05-12",
+          "permission": "social_media",
+          "action": "denied",
+          "requested_by": "Tigist Assefa (Mother)",
+          "approved_by": "Robert Johnson (Director)"
+        }
+      ],
+      "attendance": [
+        {
+          "date": "2025-06-01",
+          "check_in": "09:00 AM",
+          "check_out": "03:15 PM",
+          "status": "Present"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Selamawit Girma",
+      "age": 6,
+      "birth_date": "2019-11-05",
+      "gender": "Female",
+      "age_group": {
+        "name": "Sunshine Kids",
+        "color": "#32CD32",
+        "range": "5-6 years"
+      },
+      "photo": "/assets/age2/10.jpg",
+      "allergies": ["Dairy"],
+      "medications": "None",
+      "permissions": {
+        "photos": false,
+        "social_media": false,
+        "outings": true,
+        "snacks": true
+      },
+      "permission_history": [
+        {
+          "date": "2025-05-08",
+          "permission": "outings",
+          "action": "granted",
+          "requested_by": "Girma Wolde (Father)",
+          "approved_by": "Sarah Wilson (Admin)"
+        }
+      ],
+      "attendance": [
+        {
+          "date": "2025-06-01",
+          "status": "Absent",
+          "reason": "Sick"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Mikias Abebe",
+      "age": 3,
+      "birth_date": "2022-02-18",
+      "gender": "Male",
+      "age_group": {
+        "name": "Little Angels",
+        "color": "#FFD700",
+        "range": "3-4 years"
+      },
+      "photo": "/assets/age1/5.jpg",
+      "allergies": ["Eggs"],
+      "medications": "EpiPen",
+      "permissions": {
+        "photos": true,
+        "social_media": false,
+        "outings": false,
+        "snacks": false
+      },
+      "permission_history": [
+        {
+          "date": "2025-05-15",
+          "permission": "photos",
+          "action": "granted",
+          "requested_by": "Frehiwot Abebe (Mother)",
+          "approved_by": "Sarah Wilson (Admin)"
+        }
+      ],
+      "attendance": [
+        {
+          "date": "2025-06-01",
+          "check_in": "08:45 AM",
+          "check_out": "03:30 PM",
+          "status": "Present"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Hana Mohammed",
+      "age": 5,
+      "birth_date": "2020-09-30",
+      "gender": "Female",
+      "age_group": {
+        "name": "Bright Stars",
+        "color": "#4169E1",
+        "range": "5-6 years"
+      },
+      "photo": "/assets/age3/11.jpg",
+      "allergies": ["None"],
+      "medications": "None",
+      "permissions": {
+        "photos": true,
+        "social_media": true,
+        "outings": true,
+        "snacks": true
+      },
+      "permission_history": [
+        {
+          "date": "2025-05-10",
+          "permission": "social_media",
+          "action": "granted",
+          "requested_by": "Mohammed Ahmed (Father)",
+          "approved_by": "Sarah Wilson (Admin)"
+        }
+      ],
+      "attendance": [
+        {
+          "date": "2025-06-01",
+          "check_in": "08:30 AM",
+          "check_out": "03:00 PM",
+          "status": "Present"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Dawit Kebede",
+      "age": 4,
+      "birth_date": "2021-01-12",
+      "gender": "Male",
+      "age_group": {
+        "name": "Little Angels",
+        "color": "#FFD700",
+        "range": "3-4 years"
+      },
+      "photo": "/assets/age3/13.jpg",
+      "allergies": ["Pollen"],
+      "medications": "Antihistamines",
+      "permissions": {
+        "photos": false,
+        "social_media": false,
+        "outings": false,
+        "snacks": true
+      },
+      "permission_history": [
+        {
+          "date": "2025-05-14",
+          "permission": "snacks",
+          "action": "granted",
+          "requested_by": "Alem Kebede (Mother)",
+          "approved_by": "Sarah Wilson (Admin)"
+        }
+      ],
+      "attendance": [
+        {
+          "date": "2025-06-01",
+          "status": "Absent",
+          "reason": "Family trip"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Rahel Asnake",
+      "age": 6,
+      "birth_date": "2019-12-25",
+      "gender": "Female",
+      "age_group": {
+        "name": "Sunshine Kids",
+        "color": "#32CD32",
+        "range": "5-6 years"
+      },
+      "photo": "/assets/age5/22.jpg",
+      "allergies": ["None"],
+      "medications": "None",
+      "permissions": {
+        "photos": true,
+        "social_media": true,
+        "outings": true,
+        "snacks": true
+      },
+      "permission_history": [
+        {
+          "date": "2025-05-12",
+          "permission": "outings",
+          "action": "granted",
+          "requested_by": "Asnake Demissie (Father)",
+          "approved_by": "Sarah Wilson (Admin)"
+        }
+      ],
+      "attendance": [
+        {
+          "date": "2025-06-01",
+          "check_in": "09:15 AM",
+          "check_out": "03:45 PM",
+          "status": "Present"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Nahom Tadesse",
+      "age": 3,
+      "birth_date": "2022-04-08",
+      "gender": "Male",
+      "age_group": {
+        "name": "Little Angels",
+        "color": "#FFD700",
+        "range": "3-4 years"
+      },
+      "photo": "/assets/age4/18.jpg",
+      "allergies": ["Shellfish"],
+      "medications": "None",
+      "permissions": {
+        "photos": false,
+        "social_media": false,
+        "outings": true,
+        "snacks": false
+      },
+      "permission_history": [
+        {
+          "date": "2025-05-08",
+          "permission": "outings",
+          "action": "granted",
+          "requested_by": "Eyerus Tadesse (Mother)",
+          "approved_by": "Sarah Wilson (Admin)"
+        }
+      ],
+      "attendance": [
+        {
+          "date": "2025-06-01",
+          "check_in": "08:30 AM",
+          "check_out": "03:00 PM",
+          "status": "Present"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Meron Getachew",
+      "age": 5,
+      "birth_date": "2020-08-17",
+      "gender": "Female",
+      "age_group": {
+        "name": "Bright Stars",
+        "color": "#4169E1",
+        "range": "5-6 years"
+      },
+      "photo": "/assets/age4/19.jpg",
+      "allergies": ["None"],
+      "medications": "None",
+      "permissions": {
+        "photos": true,
+        "social_media": true,
+        "outings": false,
+        "snacks": true
+      },
+      "permission_history": [
+        {
+          "date": "2025-05-15",
+          "permission": "social_media",
+          "action": "granted",
+          "requested_by": "Getachew Solomon (Father)",
+          "approved_by": "Sarah Wilson (Admin)"
+        }
+      ],
+      "attendance": [
+        {
+          "date": "2025-06-01",
+          "check_in": "08:45 AM",
+          "check_out": "03:15 PM",
+          "status": "Present"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Kaleb Yohannes",
+      "age": 4,
+      "birth_date": "2021-05-20",
+      "gender": "Male",
+      "age_group": {
+        "name": "Little Angels",
+        "color": "#FFD700",
+        "range": "3-4 years"
+      },
+      "photo": "/assets/age4/16.jpg",
+      "allergies": ["Dust"],
+      "medications": "None",
+      "permissions": {
+        "photos": true,
+        "social_media": false,
+        "outings": true,
+        "snacks": false
+      },
+      "permission_history": [
+        {
+          "date": "2025-05-10",
+          "permission": "photos",
+          "action": "granted",
+          "requested_by": "Sara Yohannes (Mother)",
+          "approved_by": "Sarah Wilson (Admin)"
+        }
+      ],
+      "attendance": [
+        {
+          "date": "2025-06-01",
+          "check_in": "09:00 AM",
+          "check_out": "03:30 PM",
+          "status": "Present"
+        }
+      ]
+    }
+  ]

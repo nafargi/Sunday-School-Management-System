@@ -19,7 +19,7 @@ useEffect(() => {
     setChildren(childrenData);
   } else {
     console.error("Data is not an array:", childrenData);
-    setChildren([]); // Fallback to empty array
+    setChildren([]);
   }
 }, []);
 
@@ -85,13 +85,13 @@ useEffect(() => {
               </td>
               <td className="py-2 px-4  border-b border-gray-200">
                 <button 
-                  className="bg-blue-500 text-white px-3 py-1 rounded mr-2"
+                  className="bg-blue-200 border border-blue-500 rounded-full text-blue-500  text-sm font-normal px-3 py-1 mr-2"
                   onClick={() => console.log(`Send reminder for ${child.name}`)}
                 >
                   Remind
                 </button>
                 <button 
-                  className="bg-green-500 text-white px-3 py-1 rounded"
+                  className="bg-green-200 border border-green-500 text-sm font-normal rounded-full text-green-500 px-3 py-1 "
                   onClick={() => console.log(`Print form for ${child.name}`)}
                 >
                   Print
