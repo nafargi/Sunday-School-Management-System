@@ -1,12 +1,28 @@
-import React from 'react';
+// pages/Lessons.jsx
+import React,{useState} from 'react';
+import LessonHeader from '../components/activities/ActivityHeader';
+import LessonView from '../components/activities/ActivitiesView';
+import TabSwitcher from '../components/activities/TabSwicher';
+import LessonGrid from '../components/activities/CalendarView';
 
 const Activities = () => {
+   const [activeTab, setActiveTab] = useState('List View');
+  
+    const renderTab = () => {
+    switch (activeTab) {
+        case 'Calendar View':
+          return <LessonGrid />;
+        default:
+          return <LessonView />;
+      }
+    };
   return (
     <div>
-      <h1 className="text-2xl font-bold text-gray-800">Activities & Events</h1>
-      <p className="mt-2 text-gray-600">
-        Plan and manage Sunday school activities such as music time, storytelling sessions, art classes, and special events.
-      </p>
+      <div className="p-6">
+         <LessonHeader />
+        <TabSwitcher activeTab={activeTab} setActiveTab={setActiveTab} />
+         {renderTab()}
+      </div>
     </div>
   );
 };
