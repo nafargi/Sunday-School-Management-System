@@ -1,0 +1,152 @@
+ [
+    {
+      "id": 1,
+      "title": "Timket (Epiphany) Celebration",
+      "type": "Special Event",
+      "date": "2025-01-19",
+      "location": "Church Grounds & Nearby River",
+      "status": "Upcoming",
+      "actions": "Open menu",
+      "details": {
+        "description": "Commemorate Jesus' baptism with Ethiopian Protestant adaptations of the traditional water blessing ceremony.",
+        "materials": ["Bible", "Cross", "Water vessels", "Traditional white garments"],
+        "participants": "All church members",
+        "special_notes": "Includes procession with replicas of the Ark of the Covenant"
+      }
+    },
+    {
+      "id": 2,
+      "title": "Fasika (Easter) Resurrection Service",
+      "type": "Worship",
+      "date": "2025-04-20",
+      "location": "Sanctuary",
+      "status": "Planning",
+      "actions": "Open menu",
+      "details": {
+        "description": "Sunrise service celebrating Christ's resurrection with Ethiopian hymns and communion.",
+        "materials": ["Communion elements", "Musical instruments", "Resurrection banners"],
+        "participants": "Entire congregation",
+        "special_notes": "Followed by festive meal with traditional dishes like doro wat"
+      }
+    },
+    {
+      "id": 3,
+      "title": "Meskel (Finding of the True Cross)",
+      "type": "Cultural-Religious Event",
+      "date": "2025-09-27",
+      "location": "Church Lawn",
+      "status": "Upcoming",
+      "actions": "Open menu",
+      "details": {
+        "description": "Bonfire ceremony commemorating Queen Helena's discovery of the cross, adapted for Protestant worship.",
+        "materials": ["Firewood", "Cross replica", "Yellow flowers (demero)"],
+        "participants": "All ages",
+        "special_notes": "Includes Scripture readings about the cross"
+      }
+    },
+    {
+      "id": 4,
+      "title": "Ethiopian Bible Translation Anniversary",
+      "type": "Educational Event",
+      "date": "2025-10-05",
+      "location": "Fellowship Hall",
+      "status": "Planning",
+      "actions": "Open menu",
+      "details": {
+        "description": "Celebrate the translation of Scriptures into Amharic and other Ethiopian languages.",
+        "materials": ["Vintage Bibles", "Translation displays", "Language maps"],
+        "participants": "Bible study groups",
+        "special_notes": "Guest speakers from Bible societies"
+      }
+    },
+    {
+      "id": 5,
+      "title": "Protestant Reformation Day",
+      "type": "Historical Commemoration",
+      "date": "2025-10-31",
+      "location": "Main Hall",
+      "status": "Upcoming",
+      "actions": "Open menu",
+      "details": {
+        "description": "Marking the growth of Protestant Christianity in Ethiopia since the 19th century.",
+        "materials": ["Historical photos", "Reformation literature", "Traditional musical instruments"],
+        "participants": "Youth & adult members",
+        "special_notes": "Focus on Ethiopian reformers like Onesimos Nesib"
+      }
+    },
+    {
+      "id": 6,
+      "title": "Sunday School Anniversary",
+      "type": "Children's Event",
+      "date": "2025-06-15",
+      "location": "Church Campus",
+      "status": "Planning",
+      "actions": "Open menu",
+      "details": {
+        "description": "Annual celebration of children's ministry with performances and awards.",
+        "materials": ["Certificates", "Costumes", "Bible quiz materials"],
+        "participants": "Children & teachers",
+        "special_notes": "Includes Amharic Bible recitation competition"
+      }
+    },
+    {
+      "id": 7,
+      "title": "Harvest Thanksgiving",
+      "type": "Agricultural Festival",
+      "date": "2025-11-10",
+      "location": "Outdoor Tent",
+      "status": "Upcoming",
+      "actions": "Open menu",
+      "details": {
+        "description": "Giving thanks for crops with Ethiopian Protestant adaptations of traditional harvest songs.",
+        "materials": ["Teff, coffee, maize displays", "Offering baskets", "Traditional drums"],
+        "participants": "Farmers & families",
+        "special_notes": "Produce donated to church food bank"
+      }
+    },
+    {
+      "id": 8,
+      "title": "Youth Gospel Concert",
+      "type": "Musical Event",
+      "date": "2025-08-12",
+      "location": "Sanctuary",
+      "status": "Planning",
+      "actions": "Open menu",
+      "details": {
+        "description": "Contemporary worship featuring Ethiopian gospel artists and church bands.",
+        "materials": ["Sound system", "Krar and masenqo instruments", "Lyric slides"],
+        "participants": "Youth choir & band",
+        "special_notes": "Modern arrangements of mezmur songs"
+      }
+    },
+    {
+      "id": 9,
+      "title": "Women's Prayer Conference",
+      "type": "Spiritual Retreat",
+      "date": "2025-03-08",
+      "location": "Retreat Center",
+      "status": "Upcoming",
+      "actions": "Open menu",
+      "details": {
+        "description": "Weekend event combining International Women's Day with biblical teaching.",
+        "materials": ["Study booklets", "Prayer journals", "Traditional coffee ceremony items"],
+        "participants": "Women's ministry",
+        "special_notes": "Focus on Esther and Ethiopian women of faith"
+      }
+    },
+    {
+      "id": 10,
+      "title": "Church Planting Anniversary",
+      "type": "Founders' Day",
+      "date": "2025-05-28",
+      "location": "Main Hall",
+      "status": "Upcoming",
+      "actions": "Open menu",
+      "details": {
+        "description": "Celebrating the establishment of this Protestant congregation in Ethiopia.",
+        "materials": ["Historical timeline", "Founders' photos", "Testimony videos"],
+        "participants": "Multigenerational",
+        "special_notes": "Commissioning of new missionaries"
+      }
+    }
+  ]
