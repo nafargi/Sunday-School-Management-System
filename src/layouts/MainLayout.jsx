@@ -2,14 +2,14 @@
 import React from 'react';
 import Header from '../app/Header';
 import Sidebar from '../app/Sidebar';
+import Dashboard from '../pages/Dashboard';
 import { Outlet } from 'react-router-dom';
 
 function MainLayout() {
   return (
     <div className="">
       <Sidebar />
-      <div className="ml-64">
-
+      <div className=" md:ml-52 lg:ml-64">
         <Header />
         <div className="p-1 mt-12">
             <div className="fixed w-[100%] left-0 top-[-100px]  z-[-1]">
@@ -30,7 +30,9 @@ function MainLayout() {
              <rect width="100" height="100" fill="url(#churchPattern)"/>
           </svg>
          </div>
-          <Outlet />
+         <div className="mt-4">
+                 <Outlet />
+         </div>
         </div>
       </div>
     </div>

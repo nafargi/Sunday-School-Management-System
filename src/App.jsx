@@ -13,10 +13,6 @@ import Settings from './pages/Settings';
 import Reports from './pages/Reports';
 import UserProfile from './pages/UserProfile'
 import Activities from './pages/Activities';
-import ChildDetailView from '././components/children/ChildDetailView';
-
-
-
 function App() {
 
   return (
@@ -34,7 +30,6 @@ function App() {
           <Route path="settings" element={<Settings/>} />
           <Route path="activities" element={<Activities/>} />
           <Route path="permissions" element={<Permissions/>} />
-          {/* Add more routes as needed */}
         </Route>
       </Routes>
     </>
