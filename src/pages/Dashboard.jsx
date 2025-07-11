@@ -20,7 +20,7 @@ const Dashboard = () => {
   };
 
   return (
-    <div className="p-6">
+    <div className="md:p-6 p-2">
       <DashboardHeader />
       <TabSwitcher activeTab={activeTab} setActiveTab={setActiveTab} />
       {renderTab()}

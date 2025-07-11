@@ -5,7 +5,7 @@ import EmergencyData from '../components/emergency/EmergencyData';
 const EmergencyInfo = () => {
   return (
     <div>
-      <div className="p-6">
+      <div className="md:p-6 p-2">
         <EmergencyHeader />
         <EmergencyData />
         <EmergencyList />

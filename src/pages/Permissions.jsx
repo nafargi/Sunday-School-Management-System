@@ -65,7 +65,7 @@ const Permissions = () => {
   };
 
   return (
-    <div className='p-6'>
+    <div className='md:p-6 p-2'>
      <PermissionHeader  />
        <div className="grid  grid-cols-1 lg:grid-cols-5 gap-4 mt-4">
          {data.map((group, idx) => (
