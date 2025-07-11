@@ -345,7 +345,7 @@ const childrenData = [
 
   return (
   <div className="mt-6 flex flex-col space-y-4">
-    <div className="flex gap-4 ">
+    <div className="flex gap-4 flex-col md:flex-row items-center justify-between ">
         <AttendanceDate />
         <AttendanceSummary
                 present={presentCount}

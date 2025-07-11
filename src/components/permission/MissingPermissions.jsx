@@ -51,8 +51,8 @@ useEffect(() => {
         </select>
       </div>
 
-      <div className="border border-gray-200 rounded-lg  overflow-hidden ">
-        <table className="min-w-full bg-white ">
+      <div className="border overflow-x-auto border-gray-200 rounded-lg  overflow-hidden ">
+        <table className="min-w-full  bg-white ">
         <thead className='border border-gray-200  bg-gray-50 text-sm'>
           <tr>
             <th className="py-2 px-4 font-normal ">Photo</th>

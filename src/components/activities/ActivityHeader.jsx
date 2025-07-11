@@ -2,7 +2,7 @@ import React from 'react'
 
 function LessonHeader() {
   return (
-    <div className="flex justify-between items-center">
+    <div className="flex flex-col md:flex-row gap-4  md:justify-between md:items-center">
         <div className="">
             <h1 className="text-2xl  text-gray-800">Activities</h1>
             <p className="text-sm text-gray-500">Plan and manage Sunday School activities and events</p>

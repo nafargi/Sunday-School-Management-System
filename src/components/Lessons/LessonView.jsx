@@ -72,7 +72,7 @@ function LessonView() {
             
               
         </div>
-        <div className="mt-4 w-full overflow-hidden rounded-lg border border-gray-200">
+        <div className="mt-4 w-full overflow-x-auto overflow-hidden rounded-lg border border-gray-200">
            <table className='min-w-full overflow-x-auto'>
              <thead>
                 <tr className="bg-gray-100">

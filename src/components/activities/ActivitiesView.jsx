@@ -32,7 +32,7 @@ function LessonView() {
             <h1 className="text-2xl   text-gray-800">Activities and Events</h1>
             <p className="text-sm text-gray-500">Manage your Sunday School activities and special events</p>
         </div>
-        <div className="flex w-full justify-between  mt-3">
+        <div className="flex flex-col gap-4 md:flex-row w-full justify-between  mt-3">
 
             <div className="flex items-center w-[60%] gap-4">
                 <input type="text"  placeholder="Search lessons..." className="border w-full border-gray-300 rounded-lg px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-purple-500"
@@ -76,7 +76,7 @@ function LessonView() {
             
               
         </div>
-        <div className="mt-4 w-full overflow-hidden rounded-lg border border-gray-200">
+        <div className="mt-4 w-full overflow-x-auto overflow-hidden rounded-lg border border-gray-200">
            <table className='min-w-full overflow-x-auto'>
              <thead>
                 <tr className="bg-gray-100">

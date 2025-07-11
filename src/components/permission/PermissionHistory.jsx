@@ -26,7 +26,7 @@ const PermissionHistory = () => {
     <div className="container mx-auto p-4 bg-white mt-6 rounded-lg">
       <h1 className="text-2xl mb-6">Permission Change History</h1>
 
-      <div className="border border-gray-200 rounded-lg overflow-hidden">
+      <div className="border overflow-x-auto border-gray-200 rounded-lg overflow-hidden">
         <table className="min-w-full bg-white">
           <thead className='border border-gray-200 bg-gray-50 text-sm'>
             <tr>
