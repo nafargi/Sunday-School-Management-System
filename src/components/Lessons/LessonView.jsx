@@ -5,6 +5,17 @@ function LessonView() {
   const [searchTerm, setSearchTerm] = useState('');
   const [statusGroup, setStatusGroup] = useState('all');
   const [ageGroup, setAgeGroup] = useState('all');
+  const [selectedChild, setSelectedChild] = useState(null);
+  const [activeTab, setActiveTab] = useState('emergency-contacts');
+
+  const openDetails = (child) => {
+    setSelectedChild(child);
+  }
+
+  const closeDetails = () => {
+    setSelectedChild(null);
+  }
+
 
   const filteredData= LessonData.filter((lesson) => {
     const matchesSearch = lesson.title.toLowerCase().includes(searchTerm.toLowerCase());
@@ -97,7 +108,9 @@ function LessonView() {
                                 ? 'text-yellow-600  bg-yellow-100 rounded-full inline-block text-sm px-2 border-yellow-600 border'
                                 : 'text-gray-600'}`}>{lesson.status}</p></td>
                         <td className="px-4 py-1 font-normal  border-b border-gray-200">
-                           <button className="text-gray-800 bg-gray-50 border-gray-200 border rounded-md px-4 py-1 font-light  text-sm hover:bg-gray-100">View</button>
+                           <button 
+                                onClick={() => openDetails(lesson)}
+                              className="text-gray-800 bg-gray-50 border-gray-200 border rounded-md px-4 py-1 font-light  text-sm hover:bg-gray-100">View Details</button>
                         </td>
                     </tr>
                     ))}
@@ -105,6 +118,120 @@ function LessonView() {
            </table>
         </div>
             
+
+            {/* Detail Dialog */}
+      {selectedChild && (
+        <div className="fixed inset-0 bg-[#7c3bed0f] bg-opacity-50 flex items-center justify-center p-4 z-30">
+          <div className="bg-white rounded-lg shadow-xl w-full max-w-4xl max-h-[90vh] overflow-auto mt-10 mx-auto">
+            {/* Dialog Header */}
+            <div className=" p-6">
+              <h2 className="text-xl  text-gray-800">
+                {selectedChild.title}'s
+              </h2>
+              <p className="text-gray-600">
+                {selectedChild.teacher} • {selectedChild.age_group}
+              </p>
+              <p className="text-gray-600 text-sm"> {selectedChild.date} • {selectedChild.time}</p>
+            </div>
+
+            {/* Tabs */}
+            <div className=" px-6 rounded-lg">
+              <nav className="flex justify-between rounded-lg bg-purple-50 p-1">
+                <button
+                  onClick={() => setActiveTab('emergency-contacts')}
+                  className={`py-1  px-2 text-center border-b-2  text-sm ${activeTab === 'emergency-contacts' ? 'border-[#7C3BED] rounded-lg bg-[#7C3BED] text-[#ffffff]' : 'border-transparent text-gray-500 hover:text-gray-700'}`}
+                >
+                  Overview
+                </button>
+                <button
+                  onClick={() => setActiveTab('medical-information')}
+                  className={`py-1 px-2 text-center border-b-2  text-sm ${activeTab === 'medical-information' ? 'border-[#7C3BED] rounded-lg bg-[#7C3BED] text-[#ffffff]' : 'border-transparent text-gray-500 hover:text-gray-700'}`}
+                >
+                  Materials
+                </button>
+                <button
+                  onClick={() => setActiveTab('authorizations')}
+                  className={`py-1 px-2 text-center border-b-2   text-sm ${activeTab === 'authorizations' ? 'border-[#7C3BED] rounded-lg bg-[#7C3BED] text-[#ffffff]' : 'border-transparent text-gray-500 hover:text-gray-700'}`}
+                >
+                  Objectives
+                </button>
+              </nav>
+            </div>
+
+            {/* Tab Content */}
+            <div className="p-6">
+              {activeTab === 'emergency-contacts' && (
+                <div>
+                  <h3 className="text-lg  text-gray-900 ">Lesson Details</h3>
+                  <p className="text-sm text-gray-500 mb-2">Basic information about this lesson</p>
+        
+                  <div className="grid grid-cols-2 w-full  gap-4 mb-6 border-b border-gray-200 pb-4">
+                    <div>
+                        <p className="  text-gray-900">Date</p>
+                      <p className="text-sm text-gray-500">{selectedChild.detail_view.overview.basic_info.date}</p>
+                    </div>
+                    <div>
+                      <p className="  text-gray-900">Teacher</p>
+                      <p className="text-sm text-gray-500">{selectedChild.detail_view.overview.basic_info.teacher}</p>
+                    </div>
+                   
+                    <div>
+                      <p className="  text-gray-900">Time Duration</p>
+                      <p className="text-sm text-gray-500">{selectedChild.detail_view.overview.basic_info.time}</p>
+                    </div>
+                    <div className="col-span-2">
+                      <p className="  text-gray-900">Age Group</p>
+                      <p className="text-sm text-gray-500">{selectedChild.detail_view.overview.basic_info.age_group}</p>
+                    </div>
+                  </div>
+
+                  <h3 className="text-lg  text-gray-900 mb-4">Description </h3>
+                  <div className="grid grid-cols-2 gap-4">
+                    <div>
+                      <p className="text-sm text-gray-500">Name</p>
+                      <p className="text-gray-900">{selectedChild.detail_view.overview.description}</p>
+                    </div>
+                    
+                  </div>
+                </div>
+              )}
+
+              {activeTab === 'medical-information' && (
+                <div>
+                  <h3 className="text-lg  text-gray-900 mb-4">Required Material</h3>
+                    <p className="text-sm text-gray-500 mb-2">Materials needed for this lesson</p>
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                         <p className="text-gray-900">{selectedChild.detail_view.materials}</p>
+                  </div>
+                </div>
+              )}
+
+              {activeTab === 'authorizations' && (
+                <div>
+                  <h3 className="text-lg  text-gray-900 mb-4">Learning Objectives</h3>
+                  <p className="text-sm text-gray-500 mb-2">Goals for this lesson</p>
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                       <p className="text-gray-900">{selectedChild.detail_view.objectives}</p>
+                  </div>
+
+                  
+                </div>
+              )}
+            </div>
+
+            {/* Dialog Footer */}
+            <div className="border-t border-gray-200 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
+              <button
+                type="button"
+                onClick={closeDetails}
+                className="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-1  text-base font-medium text-gray-900 hover:bg-gray-50 focus:outline-none sm:ml-3 sm:w-auto sm:text-sm"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
         
       
     </div>
