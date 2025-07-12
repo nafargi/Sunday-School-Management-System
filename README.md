@@ -3,6 +3,13 @@
 
 # Sunday School Dashboard ✝️
 
+## 🚀 Live Demo
+
+👉 [SundayHub Live Website](https://sundayhub.vercel.app)
+
+[![Live Site](https://img.shields.io/badge/Live-Demo-green?style=for-the-badge)](https://sundayhub.vercel.app)
+
+
 *A digital solution for nurturing young believers through organized, faith-based education*
 
 ![Dashboard Preview](./screenshots/1.png)
